@@ -1,0 +1,22 @@
+<h1>New stories</h1>
+
+<form class="form-horizontal">
+
+  <label class="control-label">Name</label>
+  <input id="new_story_name" type="string">
+
+
+  <label class="control-label">Description</label>
+  <input id="new_story_description" type="text">
+
+  <label class="control-label">Started_at</label>
+  <input id="new_story_started_at" type="date">
+
+  <label class="control-label">Ended_at</label>
+  <input id="new_story_ended_at" type="date">
+
+
+  <button class="btn cancel">cancel</button>
+  <button type="submit" id="new_story">save</button>
+
+</form>

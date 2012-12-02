@@ -1,0 +1,1 @@
+<a href="#" class="remove_participant">x</a> <%= @participant.user["uid"] %> <%= @participant.user["name"] %>

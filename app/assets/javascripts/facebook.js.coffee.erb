@@ -1,0 +1,95 @@
+jQuery ->
+  window.location.hash = ""  if window.location.hash is "#_=_"
+  $('body').prepend('<div id="fb-root"></div>')
+  $.ajax
+    url: "#{window.location.protocol}//connect.facebook.net/zh_TW/all.js"
+    dataType: 'script'
+    cache: true
+    # success: (result) ->
+      # alert "Finish Loading FB"
+    error: (result) ->
+      alert "Error"
+
+
+window.fbAsyncInit = ->
+<% if Rails.env == 'development' || Rails.env == 'test' %>
+  FB.init(appId: '404861629573946', cookie: true)
+<% else %>
+  FB.init(appId: '337290613031125', cookie: true)
+<% end %>
+
+  $('#sign_in').click (e) ->
+    e.preventDefault()
+    FB.login (response) ->
+      window.location = '/auth/facebook/callback' if response.authResponse
+    , scope: "email,publish_stream,user_photos,read_friendlists"
+
+
+  $('#sign_out').click (e) ->
+    FB.getLoginStatus (response) ->
+      FB.logout() if response.authResponse
+    true
+
+
+
+  $('#add_friends_img, #add_friends_btn').click (e) ->
+    e.preventDefault()
+    event_id = $(this).data('event-id')
+    alert event_id
+    FB.ui
+      method: "apprequests"
+      message: " should learn more about this awesome site."
+      data: "extra data"
+    ,(sendlist) ->
+      if sendlist? and sendlist.to and sendlist.to.length > 0
+        i = 0
+        while i < sendlist.to.length
+          FB.api "/" + sendlist["to"][i].toString(), (invitee1) ->
+            # console.log(invitee1)
+            name = invitee1.name
+            uid = invitee1.id
+            FB.api "/" + uid.toString() + "/picture", (invitee2) ->
+              # console.log(invitee2)
+              picture = invitee2.data.url
+              alert name
+              $.ajax
+                type: "POST",
+                url: "/users/invited",
+                dataType: 'json',
+                data: { "uid": uid, "name": name, "picture": picture, "event_id": event_id  }
+          i++
+      else
+        alert "No invitations sent"
+
+
+  $("select#albums").change ->
+    $('option:selected', this).each ->
+      FB.api "/" + $(this).data('fbid') + "/photos", (pictures) ->
+        console.log pictures
+        $('ul#photos').html("")
+        pictures['data'].forEach (picture, index) ->
+          $('ul#photos').prepend("<li><img src=" + picture.picture + " data-fbid=" + picture.id + "></li>")
+
+  
+
+
+
+
+      # console.log(list)
+      # $.ajax
+      #   type: "POST",
+      #   url: "/users/invited",
+      #   dataType: 'jsonp',
+      #   data: list
+
+
+      # $.post "/users/invited", sendlist, (json) ->
+      #   if json.status == "success"
+      #     alert "success!"
+      #   else
+      #     alert "faild!"
+
+
+  # alert "Finish fbAsyncInit"
+
+
