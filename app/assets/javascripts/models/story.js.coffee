@@ -1,9 +1,9 @@
-class Audiobook.Models.Story extends Backbone.Model
+class WishPlus.Models.Story extends Backbone.Model
   urlRoot: ->
     '/api/stories/'
 
   # initialize: ->
-  #   # this.users = new Audiobook.Collections.Users();
+  #   # this.users = new WishPlus.Collections.Users();
   #   this.on("change:users", this.parseUsers)
   #   this.parseUsers()
 
@@ -17,13 +17,13 @@ class Audiobook.Models.Story extends Backbone.Model
   # parseUsers: ->
   #   # delete this.users
   #   # console.log this.get('users')
-  #   # this.users = new Audiobook.Collections.Users(this.get('users'))
-  #   this.users = new Audiobook.Collections.Users()
+  #   # this.users = new WishPlus.Collections.Users(this.get('users'))
+  #   this.users = new WishPlus.Collections.Users()
   #   this.users.fetch({async:false}, {story_id: this.id})
   
 
   initialize: ->
-    @participants = new Audiobook.Collections.Stories.Participants({story_id: this.id})
+    @participants = new WishPlus.Collections.Stories.Participants({story_id: this.id})
     # this.participants.fetch({async:false})
 
   validate: (attrs) ->

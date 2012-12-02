@@ -1,4 +1,4 @@
-class Audiobook.Views.StoryShow.Participant extends Backbone.View
+class WishPlus.Views.StoryShow.Participant extends Backbone.View
 
   template: JST['stories/show/participant']
   tagName: 'li'

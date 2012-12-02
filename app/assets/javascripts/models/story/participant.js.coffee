@@ -1,4 +1,4 @@
-class Audiobook.Models.Story.Participant extends Backbone.Model
+class WishPlus.Models.Story.Participant extends Backbone.Model
 
   # url: ->
   #   '/api/stories/' + this.story_id + '/participations/' + this.id

@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :oauth_token
       t.string :picture
       t.datetime :oauth_expires_at
-
+      t.datetime :birthday
       t.timestamps
     end
   end

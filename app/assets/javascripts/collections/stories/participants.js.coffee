@@ -1,6 +1,6 @@
-class Audiobook.Collections.Stories.Participants extends Backbone.Collection
+class WishPlus.Collections.Stories.Participants extends Backbone.Collection
 
-  model: Audiobook.Models.Story.Participant
+  model: WishPlus.Models.Story.Participant
 
   initialize: (options) -> 
     this.story_id = options.story_id

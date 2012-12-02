@@ -26,8 +26,7 @@ ActiveRecord::Schema.define(:version => 20121118140951) do
 
   create_table "stories", :force => true do |t|
     t.string   "name"
-    t.date     "started_at"
-    t.date     "ended_at"
+    t.date     "birthday"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -39,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20121118140951) do
     t.string   "oauth_token"
     t.string   "picture"
     t.datetime "oauth_expires_at"
+    t.datetime "birthday"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

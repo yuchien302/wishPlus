@@ -1,4 +1,4 @@
-class Audiobook.Views.StoryShow extends Backbone.View
+class WishPlus.Views.StoryShow extends Backbone.View
 
   template: JST['stories/show']
 
@@ -23,7 +23,7 @@ class Audiobook.Views.StoryShow extends Backbone.View
 
   appendParticipant: (participant) =>
     console.log participant
-    view = new Audiobook.Views.StoryShow.Participant(model: participant)
+    view = new WishPlus.Views.StoryShow.Participant(model: participant)
     @$('#participants').append(view.render().el)
     
 

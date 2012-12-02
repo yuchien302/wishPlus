@@ -15,7 +15,7 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
-//= require .//audiobook
+//= require .//wishPlus
 //= require .//facebook
 //= require_tree ../templates/
 //= require_tree .//models

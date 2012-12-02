@@ -1,4 +1,4 @@
-class Audiobook.Collections.Stories extends Backbone.Collection
+class WishPlus.Collections.Stories extends Backbone.Collection
 
-  model: Audiobook.Models.Story
+  model: WishPlus.Models.Story
   url: '/api/stories'

@@ -1,4 +1,4 @@
-class Audiobook.Views.StoriesNew extends Backbone.View
+class WishPlus.Views.StoriesNew extends Backbone.View
 
   template: JST['stories/new']
   
@@ -18,9 +18,7 @@ class Audiobook.Views.StoriesNew extends Backbone.View
     e.preventDefault()
     attributes = 
       name: $('#new_story_name').val()
-      description: $('#new_story_description').val()
-      started_at: $('#new_story_started_at').val()
-      ended_at: $('#new_story_ended_at').val()
+      birthday: $('#new_story_birthday').val()
     @model.save attributes,
       wait:true
       success: (story) ->
