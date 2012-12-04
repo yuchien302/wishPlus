@@ -13,8 +13,10 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
 
   newPhotoWish: (e) ->
     e.preventDefault()
+    photo = new FormData()
     attributes = 
-      name: $('#new_photowish_name').val()
+      name: @$('#new_photowish_name').val()
+      # photo: @$('#new_photowish_photo').val()
       type: "Photowish"
       story_id: @collection.story_id
     console.log attributes

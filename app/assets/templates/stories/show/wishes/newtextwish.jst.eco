@@ -2,5 +2,5 @@
   <input id="new_textwish_description" type="text">
 
 
-  <button class="btn cancel">cancel</button>
-  <button type="submit" id="submit_new_textwish">save</button>
+  <button class="btn">cancel</button>
+  <button class="btn btn-primary"type="submit" id="submit_new_textwish">save</button>

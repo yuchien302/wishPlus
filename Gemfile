@@ -10,6 +10,8 @@ gem 'jquery-rails', '2.0.2'
 gem 'omniauth-facebook'
 gem 'backbone-on-rails'
 gem 'rabl'
+gem 'rmagick'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

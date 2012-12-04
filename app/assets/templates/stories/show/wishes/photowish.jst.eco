@@ -1,1 +1,1 @@
-<a href="#" class="remove_wish">x</a> <em>this is photo: </em><%= @wish.get('name') %>
+<a href="#" class="remove_wish">x</a> <em>this is photo: </em><%= @wish.get('name') %><img src="<%= @wish.get('photo') %>"><%= @wish.get('photo') %>

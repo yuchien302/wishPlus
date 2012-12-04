@@ -17,7 +17,7 @@ class WishPlus.Views.StoryShow.NewTextWish extends Backbone.View
   newTextWish: (e) ->
     e.preventDefault()
     attributes = 
-      description: $('#new_textwish_description').val()
+      description: @$('#new_textwish_description').val()
       type: "Textwish"
       story_id: @collection.story_id
     console.log attributes
