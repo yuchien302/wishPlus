@@ -1,7 +1,16 @@
 <h1>stories/show.jst.eco</h1>
 <h2>name: <%= @story.get("name") %></h2>
-<h2>started_at: <%= @story.get("started_at") %></h2>
-<h2>ended_at: <%= @story.get("ended_at") %></h2>
+<h2>birthday: <%= @story.get("birthday") %></h2>
+
+
+
 <ul id="participants">
   <li id="add_participant">+</li>
 </ul>
+
+
+<ul id="wishes">
+</ul>
+
+
+<button id="add_wish">add_wish</button>

@@ -1,0 +1,6 @@
+  <label class="control-label">Name</label>
+  <input id="new_photowish_name" type="string">
+
+
+  <button class="btn cancel">cancel</button>
+  <button type="submit" id="submit_new_photowish">save</button>

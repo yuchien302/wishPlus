@@ -1,6 +1,7 @@
 class Story < ActiveRecord::Base
-  attr_accessible :description, :ended_at, :name, :started_at, :users
+  attr_accessible :name, :birthday, :users
   has_many :participations, dependent: :destroy
+  has_many :wishes, dependent: :destroy
   has_many :users, through: :participations
   accepts_nested_attributes_for :users
   validates :name, :presence => true

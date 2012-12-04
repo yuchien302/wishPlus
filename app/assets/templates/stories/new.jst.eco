@@ -11,6 +11,6 @@
 
 
   <button class="btn cancel">cancel</button>
-  <button type="submit" id="new_story">save</button>
+  <button type="submit" id="submit_new_story">save</button>
 
 </form>

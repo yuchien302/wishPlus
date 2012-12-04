@@ -23,7 +23,8 @@ class WishPlus.Models.Story extends Backbone.Model
   
 
   initialize: ->
-    @participants = new WishPlus.Collections.Stories.Participants({story_id: this.id})
+    @participants = new WishPlus.Collections.Stories.Participants({}, {story_id: this.id})
+    @wishes = new WishPlus.Collections.Stories.Wishes({}, {story_id: this.id})
     # this.participants.fetch({async:false})
 
   validate: (attrs) ->

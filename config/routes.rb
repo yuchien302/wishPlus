@@ -15,6 +15,7 @@ WishPlus::Application.routes.draw do
   scope "api" do
     resources :stories do
       resources :participations
+      resources :wishes
     end
 
     resources :users

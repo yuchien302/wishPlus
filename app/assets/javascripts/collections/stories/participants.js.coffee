@@ -2,7 +2,7 @@ class WishPlus.Collections.Stories.Participants extends Backbone.Collection
 
   model: WishPlus.Models.Story.Participant
 
-  initialize: (options) -> 
+  initialize: (models, options) -> 
     this.story_id = options.story_id
   
 

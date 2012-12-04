@@ -7,7 +7,7 @@ class WishPlus.Views.StoriesNew extends Backbone.View
     # @collection.on("error", @error, this)
 
   events:
-    'click #new_story': 'newStory'
+    'click #submit_new_story': 'newStory'
 
   render:  ->
     $(@el).html(@template())

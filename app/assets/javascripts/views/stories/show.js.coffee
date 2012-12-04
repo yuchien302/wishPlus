@@ -4,6 +4,7 @@ class WishPlus.Views.StoryShow extends Backbone.View
 
   events:
     'click #add_participant': 'addParticipant'
+    'click #add_wish': 'addWish'
 
 
   initialize: ->
@@ -12,12 +13,14 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @model.participants.on("add", @appendParticipant, this)
     @model.participants.on("reset", @render, this)
 
+    @model.wishes.fetch({async:false})
+    @model.wishes.on("add", @appendWish, this)
+    @model.wishes.on("reset", @render, this)
+
   render: ->
-    # console.log @model.users
-    # @model.users.forEach (user) ->
-    #   console.log user.get("name");
     $(@el).html(@template(story: @model))
     @model.participants.each(@appendParticipant)
+    @model.wishes.each(@appendWish)
     this
 
 
@@ -26,6 +29,13 @@ class WishPlus.Views.StoryShow extends Backbone.View
     view = new WishPlus.Views.StoryShow.Participant(model: participant)
     @$('#participants').append(view.render().el)
     
+  appendWish: (wish) =>
+    console.log wish.get("type")
+    view
+    switch wish.get("type")
+      when 'Textwish' then view = new WishPlus.Views.StoryShow.TextWish(model: wish)
+      when 'Photowish' then view = new WishPlus.Views.StoryShow.PhotoWish(model: wish)
+    @$('#wishes').append(view.render().el)
 
   addParticipant: (e) ->
     e.preventDefault()
@@ -46,5 +56,11 @@ class WishPlus.Views.StoryShow extends Backbone.View
                     uid: user["id"]
                     name: user["name"]
                     provider: "facebook"
+
+  addWish: (e) ->
+    e.preventDefault()
+    newWishView = new WishPlus.Views.StoryShow.NewWish({collection: @model.wishes})
+    $(@el).append(newWishView.render().el)
+
 
 
