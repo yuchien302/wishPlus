@@ -1,15 +1,15 @@
 class WishPlus.Views.StoryShow.NewTextWish extends Backbone.View
 
   template: JST['stories/show/wishes/newtextwish']
-  tagName: 'li'
+  # tagName: 'li'
   # id: 'new_wish'
 
   events:
     'click #submit_new_textwish': 'newTextWish'
-    'focus' : 'BBB'
+  #   'focus' : 'BBB'
 
-  BBB: (e) ->
-    alert "byebye"
+  # BBB: (e) ->
+  #   alert "byebye"
   # initialize: ->
   #   @model.on('change', @render, this)
   #   @model.on('destroy', @close, this)

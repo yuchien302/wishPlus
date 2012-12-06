@@ -19,6 +19,7 @@ group :development, :test do
   gem 'guard-rspec', '1.2.1'
   gem 'guard-spork', '1.2.0'  
   gem 'spork', '0.9.2'
+  gem 'debugger'
 end
 
 # Gems used only for assets and not required
@@ -27,6 +28,7 @@ group :assets do
   gem 'sass-rails',   '3.2.5'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
+  gem 'jquery-fileupload-rails'
 end
 
 group :test do

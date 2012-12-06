@@ -14,11 +14,24 @@ class WishesController < ApplicationController
   end
 
   def create
+    # debugger
     @story = Story.find(params[:story_id])
-    @wish = Wish.create(params[:wish])
+
+    if params[:type] == "Photowish"
+      # debugger
+      @wish = Photowish.new()
+      @wish.photo = params[:photo] || params[:remote_photo_url]
+      
+    else
+      @wish = Wish.new()
+    end
+
+    @wish.type = params[:type]
+    @wish.story = @story
     @wish.user = current_user
     @wish.save!
     respond_with  @story, @wish
+
   end
 
   def update

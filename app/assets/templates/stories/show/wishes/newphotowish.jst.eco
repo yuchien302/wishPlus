@@ -1,7 +1,11 @@
+<form id="add_photowish_form" enctype="multipart/form-data" name="wish">
+
   <label class="control-label">Name</label>
-  <input id="new_photowish_name" type="string">
-  <input id="new_photowish_photo" type="file">
+  <input id="new_photowish_name" name="name" type="string">
+  <input id="new_photowish_photo" name="photo" type="file">
+  <input id="new_photowish_remote_url" name="remote_photo_url" type="text">
 
 
   <button class="btn">cancel</button>
-  <button class="btn btn-primary" type="submit" id="submit_new_photowish">save</button>
+  <button class="btn btn-primary" id="submit_new_photowish">save</button>
+  </form>

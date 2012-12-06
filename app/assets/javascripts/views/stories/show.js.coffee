@@ -4,7 +4,7 @@ class WishPlus.Views.StoryShow extends Backbone.View
 
   events:
     'click #add_participant': 'addParticipant'
-    'click #add_wish': 'addWish'
+    'click button#add_wish': 'addWish'
 
 
   initialize: ->

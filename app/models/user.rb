@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid
   has_many :participations, dependent: :destroy
   has_many :wishes, dependent: :destroy
+  has_many :chats, dependent: :destroy
   has_many :stories, through: :participations
 
 

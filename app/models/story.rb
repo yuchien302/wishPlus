@@ -3,6 +3,7 @@ class Story < ActiveRecord::Base
   has_many :participations, dependent: :destroy
   has_many :wishes, dependent: :destroy
   has_many :users, through: :participations
+  has_many :chats, dependent: :destroy
   accepts_nested_attributes_for :users
   validates :name, :presence => true
 

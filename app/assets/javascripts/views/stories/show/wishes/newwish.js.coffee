@@ -19,11 +19,11 @@ class WishPlus.Views.StoryShow.NewWish extends Backbone.View
 
   addPhotoWish: (e) ->
     newPhotoWishView = new WishPlus.Views.StoryShow.NewPhotoWish({collection: @collection})
-    @$("#add_wish_form").html(newPhotoWishView.render().el)
+    @$("#add_wish").html(newPhotoWishView.render().el)
 
   addTextWish: (e) ->
     newTextWishView = new WishPlus.Views.StoryShow.NewTextWish({collection: @collection})
-    @$("#add_wish_form").html(newTextWishView.render().el)
+    @$("#add_wish").html(newTextWishView.render().el)
 
   removeWish: (e) ->
     e.preventDefault()

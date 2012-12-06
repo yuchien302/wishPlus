@@ -16,6 +16,8 @@ WishPlus::Application.routes.draw do
     resources :stories do
       resources :participations
       resources :wishes
+      resources :photowishes
+      resources :chats
     end
 
     resources :users
