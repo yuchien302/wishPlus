@@ -14,3 +14,6 @@
 
 
 <button class="btn btn-primary btn-large" id="add_wish">add_wish</button>
+
+
+<div id="char_room"></div>

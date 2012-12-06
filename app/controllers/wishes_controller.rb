@@ -17,16 +17,13 @@ class WishesController < ApplicationController
     # debugger
     @story = Story.find(params[:story_id])
 
-    if params[:type] == "Photowish"
-      # debugger
-      @wish = Photowish.new()
-      @wish.photo = params[:photo] || params[:remote_photo_url]
-      
+    if params[:wish][:type] == "Photowish"
+      @wish = Photowish.create(params[:wish])
     else
-      @wish = Wish.new()
+      @wish = Wish.create(params[:wish])
     end
 
-    @wish.type = params[:type]
+    # @wish.type = params[:type]
     @wish.story = @story
     @wish.user = current_user
     @wish.save!

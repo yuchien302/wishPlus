@@ -18,8 +18,8 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
     e.preventDefault()
     formData = new FormData($('#add_photowish_form')[0])
     console.log formData
-    formData.append('description', 'lalala')
-    formData.append('type', 'Photowish')
+    formData.append('wish[description]', 'lalala')
+    formData.append('wish[type]', 'Photowish')
 
 
 

@@ -1,9 +1,9 @@
 <form id="add_photowish_form" enctype="multipart/form-data" name="wish">
 
   <label class="control-label">Name</label>
-  <input id="new_photowish_name" name="name" type="string">
-  <input id="new_photowish_photo" name="photo" type="file">
-  <input id="new_photowish_remote_url" name="remote_photo_url" type="text">
+  <input id="new_photowish_name" name="wish[name]" type="string">
+  <input id="new_photowish_photo" name="wish[photo]" type="file">
+  <input id="new_photowish_remote_url" name="wish[remote_photo_url]" type="text">
 
 
   <button class="btn">cancel</button>
