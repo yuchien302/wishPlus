@@ -1,2 +1,60 @@
+<div id = "welcome_logo">
+	<%= image_tag("wellogo.png") %>	
+	<span class = "slogen">
+		Have a nice wish together : )
+	</span>
+</div>
+<div id ="login_fb">
+	Login
+	<%= image_tag("fb.png") %>
+</div>
+
+	<section id="jms-slideshow" class="jms-slideshow">
+				<div class="step" data-color="color-1">
+					<div class="jms-content">
+					<h3>不想用Facebook留下千篇一律的生日祝福嗎?</h3>
+					</div>
+					<%= image_tag("senario1.jpg") %>
+				</div>
+				<div class="step" data-color="color-2" data-y="900" data-rotate-x="80">
+					<div class="jms-content">
+					<h3>邀請壽星好友，<br>用影音照片文字，<br>讓生日祝福不再單調!</h3>
+					</div>
+					<%= image_tag("senario2.jpg") %>
+				</div>
+				<div class="step" data-color="color-3" data-x="-100" data-z="1500" data-rotate="170">
+					<div class="jms-content">
+					<h3>關鍵時刻絕不錯過!</h3>
+					</div>
+					<%= image_tag("senario3.jpg") %>
+				</div>
+				<div class="step" data-color="color-4" data-x="3000">
+					<div class="jms-content">
+					<h3>Surprise!!!</h3>
+					<h3>一起來寫張大卡片吧:)</h3>
+						<a class="jms-link" href="#">馬上登入試試!</a>
+					</div>
+					<%= image_tag("senario4.jpg") %>
+				</div>				
+			</section>
+			<script type="text/javascript">
+			$(function() {
+				
+				var jmpressOpts	= {
+					animation		: { transitionDuration : '0.8s' }
+				};
+				
+				$( '#jms-slideshow' ).jmslideshow( $.extend( true, { jmpressOpts : jmpressOpts }, {
+					autoplay	: true,
+					bgColorSpeed: '0.8s',
+					arrows		: false
+				}));
+				
+			});
+		</script>
+<!--
+
 <h1>MainPages#welcome</h1>
 <p>Find me in app/views/main_pages/welcome.html.erb</p>
+
+-->
