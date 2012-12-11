@@ -1,6 +1,7 @@
 @import "bootstrap";
 body {
   background-color: #addcdd;
+  background-image: url( asset-path("rails.png", image) );
 }
 
 #container {
