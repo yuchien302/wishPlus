@@ -18,19 +18,24 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @model.wishes.on("reset", @render, this)
 
   render: ->
+    console.log @model
     $(@el).html(@template(story: @model))
     @model.participants.each(@appendParticipant)
     @model.wishes.each(@appendWish)
+
+    newWishView = new WishPlus.Views.StoryShow.NewWish({collection: @model.wishes})
+    @$("#new_wish_panel").append(newWishView.render().el)
+
     this
 
 
   appendParticipant: (participant) =>
-    console.log participant
+    # console.log participant
     view = new WishPlus.Views.StoryShow.Participant(model: participant)
     @$('#participants').append(view.render().el)
     
   appendWish: (wish) =>
-    console.log wish.get("type")
+    # console.log wish.get("type")
     view
     switch wish.get("type")
       when 'Textwish' then view = new WishPlus.Views.StoryShow.TextWish(model: wish)
@@ -50,11 +55,13 @@ class WishPlus.Views.StoryShow extends Backbone.View
         sendlist.to.forEach (uid) ->
           FB.api "/" + uid, (user) ->
             FB.api "/" + uid + "/picture", (user_picture) ->
+              console.log user_picture
               unless participants.hasUser({ uid: user["id"] })
                 participants.create
                   user:
                     uid: user["id"]
                     name: user["name"]
+                    picture: user_picture.data.url
                     provider: "facebook"
 
   addWish: (e) ->

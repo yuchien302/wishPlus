@@ -16,8 +16,9 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
-//= require .//wishPlus
+//= require chosen-jquery
 //= require .//facebook
+//= require .//wishPlus
 //= require_tree ../templates/
 //= require_tree .//models
 //= require_tree .//collections

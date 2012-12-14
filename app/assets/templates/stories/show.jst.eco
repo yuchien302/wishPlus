@@ -1,11 +1,16 @@
 <h1>stories/show.jst.eco</h1>
-<h2>name: <%= @story.get("name") %></h2>
+<h2>壽星: <img src= "<%= @story.get('star').picture %>" ><%= @story.get("star").name %></h2>
+<h2>描述: <%= @story.get("name") %></h2>
 <h2>birthday: <%= @story.get("birthday") %></h2>
 
+<button id="add_participant" class="btn btn-large btn-primary">邀請更多朋友進來!</button>
 
+<!-- <button class="btn btn-primary btn-large" id="add_wish">add_wish</button> -->
+
+<div id="new_wish_panel">
+</div>
 
 <ul id="participants">
-  <li id="add_participant">+</li>
 </ul>
 
 
@@ -13,7 +18,6 @@
 </ul>
 
 
-<button class="btn btn-primary btn-large" id="add_wish">add_wish</button>
 
 
 <div id="char_room"></div>
