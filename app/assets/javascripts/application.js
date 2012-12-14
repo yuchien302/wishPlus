@@ -17,6 +17,7 @@
 //= require underscore
 //= require backbone
 //= require chosen-jquery
+//= require raphael
 //= require .//facebook
 //= require .//wishPlus
 //= require_tree ../templates/

@@ -8,7 +8,8 @@ class WishPlus.Views.StoryShow extends Backbone.View
 
 
   initialize: ->
-    # @model.participants.fetch({async:false})
+    @paper = Raphael('card', 940, 400)
+
     @model.participants.fetch({async:false})
     @model.participants.on("add", @appendParticipant, this)
     @model.participants.on("reset", @render, this)
@@ -18,7 +19,25 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @model.wishes.on("reset", @render, this)
 
   render: ->
-    console.log @model
+    
+    dot = @paper.circle(470, 40, 20)
+    text = @paper.text(50, 50, "Raphaël\nkicks\nbutt!").rotate(-25,50,50)
+    text.node.style.cursor = 'move'
+
+    start = ->
+      text.oBB = text.getBBox()
+
+    move = (dx, dy) ->
+      bb = text.getBBox()
+      text.translate(text.oBB.x - bb.x + dx, text.oBB.y - bb.y + dy)
+    
+    up = ->
+      console.log "123"
+
+    text.drag(move, start, up)      
+
+
+
     $(@el).html(@template(story: @model))
     @model.participants.each(@appendParticipant)
     @model.wishes.each(@appendWish)

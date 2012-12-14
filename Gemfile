@@ -12,6 +12,7 @@ gem 'backbone-on-rails'
 gem 'rabl'
 gem 'rmagick'
 gem 'carrierwave'
+gem "raphael-rails", "~> 2.1.0"
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
