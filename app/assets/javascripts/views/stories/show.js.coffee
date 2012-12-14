@@ -46,7 +46,31 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @$("#new_wish_panel").append(newWishView.render().el)
 
     this
+    
+  handle: (delta) ->
+    vBHo = viewBoxHeight
+    vBWo = viewBoxWidth
+    if delta < 0
+      viewBoxWidth *= 0.95
+      viewBoxHeight *= 0.95
+    else
+      viewBoxWidth *= 1.05
+      viewBoxHeight *= 1.05
+    viewBox.X -= (viewBoxWidth - vBWo) / 2
+    viewBox.Y -= (viewBoxHeight - vBHo) / 2
+    @paper.setViewBox viewBox.X, viewBox.Y, viewBoxWidth, viewBoxHeight
 
+  wheel: (event) ->
+    delta = 0
+    event = parent.window.event  unless event
+    if event.wheelDelta # IE/Opera.
+      delta = event.wheelDelta / 120  
+    else delta = -event.detail / 3  if event.detail
+
+    handle delta  if delta
+
+    event.preventDefault()  if event.preventDefault
+    event.returnValue = false
 
   appendParticipant: (participant) =>
     # console.log participant
