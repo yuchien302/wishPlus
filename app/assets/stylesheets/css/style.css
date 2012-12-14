@@ -25,22 +25,7 @@
 	-ms-transition: background-color 1s linear;
 	transition: background-color 1s linear;
 }
-/*.color-1 {
-	background-color: #E3D8FF;
-	background-color: rgba(227, 216, 268, 1);
-}
-.color-2 {
-	background-color: #EBBBBC;
-	background-color: rgba(235, 187, 188, 1);
-}
-.color-3 {
-	background-color: #EED9C0;
-	background-color: rgba(238, 217, 192, 1);
-}
-.color-4 {
-	background-color: #C1E6E5;
-	background-color: rgba(193, 230, 229, 1);
-}*/
+
 
    .color-1 {
 	   background-image:url( ../../assets/gbpaper.png);
