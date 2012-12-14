@@ -9,6 +9,25 @@ class WishPlus.Views.StoryShow extends Backbone.View
 
   initialize: ->
     @paper = Raphael('card', 940, 400)
+    @paper.setViewBox(0,0,@paper.width,@paper.height);
+    @viewBoxWidth = @paper.width;
+    @viewBoxHeight = @paper.height;
+    @viewBox = @paper.setViewBox(0, 0, @viewBoxWidth, @viewBoxHeight, true);
+    @viewBox.X = 0;
+    @viewBox.Y = 0;
+
+    parent.window.addEventListener "DOMMouseScroll", @wheel, false  if parent.window.addEventListener
+
+
+    parent.window.onmousewheel = parent.document.onmousewheel = @wheel
+
+    # $('#card').mousedown (e) ->
+    #   if (@paper.getElementByPoint( e.pageX, e.pageY ) != null) {return;}
+    #   mousedown = true;
+    #   startX = e.pageX;
+    #   startY = e.pageY;
+    #   console.log "123"
+
 
     @model.participants.fetch({async:false})
     @model.participants.on("add", @appendParticipant, this)
@@ -46,28 +65,27 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @$("#new_wish_panel").append(newWishView.render().el)
 
     this
-    
-  handle: (delta) ->
-    vBHo = viewBoxHeight
-    vBWo = viewBoxWidth
-    if delta < 0
-      viewBoxWidth *= 0.95
-      viewBoxHeight *= 0.95
-    else
-      viewBoxWidth *= 1.05
-      viewBoxHeight *= 1.05
-    viewBox.X -= (viewBoxWidth - vBWo) / 2
-    viewBox.Y -= (viewBoxHeight - vBHo) / 2
-    @paper.setViewBox viewBox.X, viewBox.Y, viewBoxWidth, viewBoxHeight
 
-  wheel: (event) ->
+  handle: (delta) =>
+
+    if delta < 0
+      @viewBoxWidth *= 0.95
+      @viewBoxHeight *= 0.95
+      console.log @viewBoxWidth
+    else
+      @viewBoxWidth *= 1.05
+      @viewBoxHeight *= 1.05
+
+    @paper.setViewBox 0, 0, @viewBoxWidth, @viewBoxHeight, false
+
+  wheel: (event) =>
     delta = 0
     event = parent.window.event  unless event
-    if event.wheelDelta # IE/Opera.
+    if event.wheelDelta 
       delta = event.wheelDelta / 120  
     else delta = -event.detail / 3  if event.detail
 
-    handle delta  if delta
+    @handle delta  if delta
 
     event.preventDefault()  if event.preventDefault
     event.returnValue = false
