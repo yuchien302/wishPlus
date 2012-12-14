@@ -4,10 +4,19 @@
 		Have a nice wish together : )
 	</span>
 </div>
-<div id ="login_fb">
-	Login
-	<%= image_tag("fb.png") %>
-</div>
+
+<% if current_user %>
+  Signed in as <strong><%= current_user.name %></strong>!
+  <%= link_to "Sign out", logout_path, id: "log_out" %>
+<% else %>
+  <div id ="login_fb">
+    <%= link_to "Login", "/auth/facebook", id: "log_in" %>
+    <%= image_tag("fb.png") %>
+  </div>
+
+<% end %>
+
+
 
 	<section id="jms-slideshow" class="jms-slideshow">
 				<div class="step" data-color="color-1">

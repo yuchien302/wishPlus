@@ -13,7 +13,7 @@ class WishPlus.Routers.Stories extends Backbone.Router
     $('#new_story_container').html(@storiesNewView.render().el)
 
   root: ->
-    alert "ya"
+    # alert "ya"
 
   index: ->
     # view = new WishPlus.Views.StoriesIndex(collection: @collection)
@@ -31,4 +31,5 @@ class WishPlus.Routers.Stories extends Backbone.Router
     $('#container').html(@storyShowView.render().el)
 
   userShow: (id) ->
-    alert "in user" + id
+    @userShowView = new WishPlus.Views.UserShow()
+    $('#container').html(@userShowView.render().el)

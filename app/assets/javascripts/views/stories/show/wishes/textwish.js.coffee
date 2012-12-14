@@ -24,3 +24,4 @@ class WishPlus.Views.StoryShow.TextWish extends Backbone.View
     this.remove()
     this.unbind()
     this.model.unbind("change", this.modelChanged)
+

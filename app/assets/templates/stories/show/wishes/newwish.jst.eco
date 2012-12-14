@@ -1,3 +1,83 @@
-<button class="btn" id="add_photowish">Add Photo</button>
+<button class="btn" id="add_photowish">來張照片吧!</button>
 <button class="btn" id="add_textwish">Add Text</button>
-<div id="add_wish"></div>
+
+
+
+<!-- photowish  -->
+<div id="create_photo_wish_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>新增相片</h3>
+  </div>
+  
+
+  <div class="modal-body custom-height-modal">
+
+
+    <form id="add_photowish_form" enctype="multipart/form-data" class="form-horizontal">
+
+
+      <div class="control-group">
+        <label class="control-label">檔案</label>
+        <div class="controls">
+          <input id="new_photowish_photo" name="wish[photo]" type="file">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">URL</label>
+        <div class="controls">
+          <input id="new_photowish_remote_url" name="wish[remote_photo_url]" type="text">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">描述</label>
+        <div class="controls">
+          <input id="new_photowish_name" name="wish[name]" type="text">
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button id="submit_new_photowish" class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
+
+<!-- textwish  -->
+<div id="create_text_wish_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>新增描述</h3>
+  </div>
+  
+
+  <div class="modal-body custom-height-modal">
+
+
+    <form id="add_textwish_form" class="form-horizontal">
+
+
+      <div class="control-group">
+        <label class="control-label">描述</label>
+        <div class="controls">
+          <div class="input">
+            <textarea id="new_textwish_description" row="8"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button id="submit_new_textwish" class="btn btn-primary">Save changes</button>
+  </div>
+</div>

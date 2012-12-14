@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+SC:700,900,400);
 body {
+
   background-image: url( asset-path("bg.jpg", image) );
 }
 
@@ -24,6 +25,7 @@ body {
 }
 
 #login_fb{
+
 	display:block;
 	top:100px;
 	right:80px;
@@ -32,4 +34,12 @@ body {
 	position: absolute;
 	font-weight: 700;
 	padding-top:2px;	
+}
+
+.custom-height-modal {
+  height: 300px;
+}
+
+#card	{
+	border: solid 1px #666;
 }

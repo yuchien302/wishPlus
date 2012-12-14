@@ -8,7 +8,8 @@ class WishPlus.Views.StoryShow extends Backbone.View
 
 
   initialize: ->
-    # @model.participants.fetch({async:false})
+    @paper = Raphael('card', 940, 400)
+
     @model.participants.fetch({async:false})
     @model.participants.on("add", @appendParticipant, this)
     @model.participants.on("reset", @render, this)
@@ -18,19 +19,42 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @model.wishes.on("reset", @render, this)
 
   render: ->
+    
+    dot = @paper.circle(470, 40, 20)
+    text = @paper.text(50, 50, "Raphaël\nkicks\nbutt!").rotate(-25,50,50)
+    text.node.style.cursor = 'move'
+
+    start = ->
+      text.oBB = text.getBBox()
+
+    move = (dx, dy) ->
+      bb = text.getBBox()
+      text.translate(text.oBB.x - bb.x + dx, text.oBB.y - bb.y + dy)
+    
+    up = ->
+      console.log "123"
+
+    text.drag(move, start, up)      
+
+
+
     $(@el).html(@template(story: @model))
     @model.participants.each(@appendParticipant)
     @model.wishes.each(@appendWish)
+
+    newWishView = new WishPlus.Views.StoryShow.NewWish({collection: @model.wishes})
+    @$("#new_wish_panel").append(newWishView.render().el)
+
     this
 
 
   appendParticipant: (participant) =>
-    console.log participant
+    # console.log participant
     view = new WishPlus.Views.StoryShow.Participant(model: participant)
     @$('#participants').append(view.render().el)
     
   appendWish: (wish) =>
-    console.log wish.get("type")
+    # console.log wish.get("type")
     view
     switch wish.get("type")
       when 'Textwish' then view = new WishPlus.Views.StoryShow.TextWish(model: wish)
@@ -50,11 +74,13 @@ class WishPlus.Views.StoryShow extends Backbone.View
         sendlist.to.forEach (uid) ->
           FB.api "/" + uid, (user) ->
             FB.api "/" + uid + "/picture", (user_picture) ->
+              console.log user_picture
               unless participants.hasUser({ uid: user["id"] })
                 participants.create
                   user:
                     uid: user["id"]
                     name: user["name"]
+                    picture: user_picture.data.url
                     provider: "facebook"
 
   addWish: (e) ->

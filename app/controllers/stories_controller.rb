@@ -2,7 +2,8 @@ class StoriesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with current_user.stories || ""
+    @stories = current_user.stories
+    # respond_with current_user.stories || ""
   end
 
   def show
@@ -12,7 +13,12 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.create(params[:story])
+    star_uid = params[:star_uid]
+    star = User.from_invited({:uid => star_uid, :provider => "facebook", 
+          :picture => params[:picture], :name => params[:star_name]})
     Participation.create({story_id: @story.id, user_id: current_user.id})
+    @story.star = star
+    @story.save!
     respond_with @story
   end
 

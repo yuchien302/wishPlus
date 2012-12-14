@@ -21,8 +21,6 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
     formData.append('wish[description]', 'lalala')
     formData.append('wish[type]', 'Photowish')
 
-
-
     $.ajax
       url: '/api/stories/' + @collection.story_id + '/wishes',
       type: 'POST',

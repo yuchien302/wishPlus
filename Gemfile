@@ -12,6 +12,7 @@ gem 'backbone-on-rails'
 gem 'rabl'
 gem 'rmagick'
 gem 'carrierwave'
+gem "raphael-rails", "~> 2.1.0"
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -29,6 +30,7 @@ group :assets do
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
   gem 'jquery-fileupload-rails'
+  gem 'chosen-rails'
 end
 
 group :test do
