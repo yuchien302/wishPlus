@@ -17,10 +17,14 @@ WishPlus::Application.routes.draw do
       resources :participations
       resources :wishes
       resources :photowishes
+      resources :videowishes
       resources :chats
     end
-
     resources :users
+  end
+
+  scope "lib" do
+    match 'soundcloud/callback', to: 'sessions#soundcloud'
   end
 
   match 'stories/:id', to: 'main_pages#story'

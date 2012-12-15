@@ -1,0 +1,1 @@
+<a href="#" class="remove_wish">x</a> <em>this is video: </em><%= @wish.get('videoId') %><div id="YT-<%= @wish.get('videoId') %>"></div>

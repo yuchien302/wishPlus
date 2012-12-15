@@ -7,57 +7,41 @@ class WishPlus.Views.StoryShow.NewWish extends Backbone.View
   events:
     'click #add_photowish': 'addPhotoWish'
     'click #add_textwish': 'addTextWish'
-    'click #submit_new_photowish': 'submitPhotoWish'
-    'click #submit_new_textwish': 'submitTextWish'
-
-  # initialize: ->
-  #   @model.on('change', @render, this)
-  #   @model.on('destroy', @close, this)
-
+    'click #add_voicewish': 'addVoiceWish'
+    'click #add_videowish': 'addVideoWish'
 
   render: ->
     $(@el).html(@template())
+    newTextWishView = new WishPlus.Views.StoryShow.NewTextWish({collection: @collection})
+    newPhotoWishView = new WishPlus.Views.StoryShow.NewPhotoWish({collection: @collection})
+    newVoiceWishView = new WishPlus.Views.StoryShow.NewVoiceWish({collection: @collection})
+    @newVideoWishView = new WishPlus.Views.StoryShow.NewVideoWish({collection: @collection})
+    @$('#new_wish_modal').append(newTextWishView.render().el)
+    @$('#new_wish_modal').append(newPhotoWishView.render().el)
+    @$('#new_wish_modal').append(newVoiceWishView.render().el)
+    @$('#new_wish_modal').append(@newVideoWishView.render().el)
     this
 
   addPhotoWish: (e) ->
     @$('#create_photo_wish_modal').modal('toggle')
 
 
-  submitPhotoWish: (e) ->
-    e.preventDefault()
-    formData = new FormData($('#add_photowish_form')[0])
-    console.log formData
-    formData.append('wish[description]', 'lalala')
-    formData.append('wish[type]', 'Photowish')
-
-    $.ajax
-      url: '/api/stories/' + @collection.story_id + '/wishes',
-      type: 'POST',
-      data: formData,
-      processData: false,
-      contentType: false,
-      type: 'POST',
-      success: (data) ->
-        location.reload()
-
-
   addTextWish: (e) ->
     @$('#create_text_wish_modal').modal('toggle')
 
-  submitTextWish: (e) ->
-    e.preventDefault()
-    attributes = 
-      description: @$('#new_textwish_description').val()
-      type: "Textwish"
-      story_id: @collection.story_id
-    console.log attributes
-    @collection.create attributes,
-      wait:true
-      success: (story) ->
-        # window.location.assign('/stories/' + story.id )
-        location.reload()
-      error: (story, msg) ->
-        alert "error: " + msg
+  addVoiceWish: (e) ->
+    @$('#create_voice_wish_modal').modal('toggle')
+
+  addVideoWish: (e) =>
+    @$('#create_video_wish_modal').modal('toggle')
+    # @widget = new YT.UploadWidget( "widget",
+    #   width: 500
+    #   events:
+    #     onUploadSuccess: -> 
+    #       console.log "success"
+    #     onProcessingComplete: ->
+    #       console.log "complete"
+    # )
 
 
   removeWish: (e) ->
