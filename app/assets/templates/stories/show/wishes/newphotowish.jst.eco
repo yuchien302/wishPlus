@@ -1,11 +1,43 @@
-<form id="add_photowish_form" enctype="multipart/form-data" name="wish">
+<div id="create_photo_wish_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
-  <label class="control-label">Name</label>
-  <input id="new_photowish_name" name="wish[name]" type="string">
-  <input id="new_photowish_photo" name="wish[photo]" type="file">
-  <input id="new_photowish_remote_url" name="wish[remote_photo_url]" type="text">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>新增相片</h3>
+  </div>
+  
+
+  <div class="modal-body custom-height-modal">
 
 
-  <button class="btn">cancel</button>
-  <button class="btn btn-primary" id="submit_new_photowish">save</button>
-  </form>
+    <form id="add_photowish_form" enctype="multipart/form-data" class="form-horizontal">
+
+
+      <div class="control-group">
+        <label class="control-label">檔案</label>
+        <div class="controls">
+          <input id="new_photowish_photo" name="wish[photo]" type="file">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">URL</label>
+        <div class="controls">
+          <input id="new_photowish_remote_url" name="wish[remote_photo_url]" type="text">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">描述</label>
+        <div class="controls">
+          <input id="new_photowish_name" name="wish[name]" type="text">
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button id="submit_new_photowish" class="btn btn-primary">Save changes</button>
+  </div>
+</div>
