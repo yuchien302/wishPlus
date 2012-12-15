@@ -25,5 +25,4 @@
 //= require_tree .//collections
 //= require_tree .//views
 //= require_tree .//routers
-//= require .//my_youtube
 //= require_tree .
