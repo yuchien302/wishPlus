@@ -7,19 +7,16 @@ class WishPlus.Views.StoryShow.NewWish extends Backbone.View
   events:
     'click #add_photowish': 'addPhotoWish'
     'click #add_textwish': 'addTextWish'
-    'click #add_voicewish': 'addVoiceWish'
     'click #add_videowish': 'addVideoWish'
 
   render: ->
     $(@el).html(@template())
     newTextWishView = new WishPlus.Views.StoryShow.NewTextWish({collection: @collection})
     newPhotoWishView = new WishPlus.Views.StoryShow.NewPhotoWish({collection: @collection})
-    newVoiceWishView = new WishPlus.Views.StoryShow.NewVoiceWish({collection: @collection})
-    @newVideoWishView = new WishPlus.Views.StoryShow.NewVideoWish({collection: @collection})
+    newVideoWishView = new WishPlus.Views.StoryShow.NewVideoWish({collection: @collection})
     @$('#new_wish_modal').append(newTextWishView.render().el)
     @$('#new_wish_modal').append(newPhotoWishView.render().el)
-    @$('#new_wish_modal').append(newVoiceWishView.render().el)
-    @$('#new_wish_modal').append(@newVideoWishView.render().el)
+    @$('#new_wish_modal').append(newVideoWishView.render().el)
     this
 
   addPhotoWish: (e) ->
@@ -28,9 +25,6 @@ class WishPlus.Views.StoryShow.NewWish extends Backbone.View
 
   addTextWish: (e) ->
     @$('#create_text_wish_modal').modal('toggle')
-
-  addVoiceWish: (e) ->
-    @$('#create_voice_wish_modal').modal('toggle')
 
   addVideoWish: (e) =>
     @$('#create_video_wish_modal').modal('toggle')

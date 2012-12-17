@@ -1,2 +1,6 @@
 <a id="create_story" href="#create_story_modal" role="button" class="btn btn-large btn-primary" data-toggle="modal">做張大卡片吧!</a>
 
+<button id="friends_birthday" class="btn btn-large btn-primary">看看最近誰生日!</button>
+
+<ul id="friendlist"></ul>
+<ul id="storieslist"></ul>

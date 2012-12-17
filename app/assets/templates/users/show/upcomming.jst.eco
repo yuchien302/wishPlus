@@ -1,0 +1,1 @@
+<img src="<%= @friend.picture %>"><%= @friend.name %><%= @friend.birthday %>

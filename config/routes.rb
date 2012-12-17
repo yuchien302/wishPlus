@@ -28,6 +28,7 @@ WishPlus::Application.routes.draw do
   end
 
   match 'stories/:id', to: 'main_pages#story'
+  match '/friends', to: 'main_pages#friends'
 
   # resources :stories
 
