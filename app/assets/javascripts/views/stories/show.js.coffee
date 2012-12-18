@@ -16,7 +16,6 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @model.wishes.on("reset", @render, this)
 
   render: ->
-    
     $(@el).html(@template(story: @model))
     @model.participants.each(@appendParticipant)
     @model.wishes.each(@appendWish)
@@ -32,16 +31,13 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @$('#participants').append(view.render().el)
     
   appendWish: (wish) =>
-    # console.log wish.get("type")
     view
     switch wish.get("type")
       when 'Textwish' then view = new WishPlus.Views.StoryShow.TextWish(model: wish)
       when 'Photowish' then view = new WishPlus.Views.StoryShow.PhotoWish(model: wish)
       when 'Videowish' then view = new WishPlus.Views.StoryShow.VideoWish(model: wish)
+      when 'Fbphotowish' then view = new WishPlus.Views.StoryShow.FBPhotoWish(model: wish)
     @$('#wishes').append(view.render().el)
-    if wish.get("type") == "Videowish"
-      console.log view
-      view.loadPlayer()
 
   addParticipant: (e) ->
     e.preventDefault()

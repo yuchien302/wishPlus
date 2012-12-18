@@ -1,0 +1,4 @@
+<select data-placeholder="FB Album" id="fb_album"></select>
+<button class="btn" id="fbphoto_you_and_star">你和她</button>
+<button class="btn" id="fbphoto_star_and_you">他和你</button>
+<div id="fb_preview">321</div>

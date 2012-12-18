@@ -6,6 +6,7 @@ class WishPlus.Collections.Stories.Wishes extends Backbone.Collection
     switch attrs.type
       when 'Textwish' then new WishPlus.Models.Story.TextWish(attrs, options)
       when 'Photowish' then new WishPlus.Models.Story.PhotoWish(attrs, options)
+      when 'Fbphotowish' then new WishPlus.Models.Story.FBPhotoWish(attrs, options)
       when 'Videowish' then new WishPlus.Models.Story.VideoWish(attrs, options)
       # else new WishPlus.Models.Story.Wish(attrs, options)
       else new Backbone.Model
