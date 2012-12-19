@@ -10,4 +10,9 @@ class MainPagesController < ApplicationController
 
   def story
   end
+
+  def friends
+    
+  end
+
 end

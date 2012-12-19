@@ -1,8 +1,9 @@
 <button class="btn" id="add_photowish">來張照片吧!</button>
 <button class="btn" id="add_textwish">寫點文字</button>
-<button class="btn" id="add_voicewish">說些話</button>
 <button class="btn" id="add_videowish">錄個影片</button>
+<button class="btn" id="add_fbphotowish">FB照片</button>
+
 
 <div id="new_wish_modal">
 
-<!-- video_wish -->
+

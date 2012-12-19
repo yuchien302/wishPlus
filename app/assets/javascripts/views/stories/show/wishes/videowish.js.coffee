@@ -25,7 +25,7 @@ class WishPlus.Views.StoryShow.VideoWish extends Backbone.View
     this
 
   loadPlayer: =>
-    console.log "123"
+    # console.log "123"
     # playername = "#YT-" + @model.get('videoId')
     # @player = new YT.Player(@$(playername)[0],
     #   height: 390

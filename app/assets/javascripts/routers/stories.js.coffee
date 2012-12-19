@@ -4,6 +4,7 @@ class WishPlus.Routers.Stories extends Backbone.Router
     'stories/:id': 'show'
     'stories': 'index'
     'users/:id': 'userShow'
+    'friends': 'friends'
 
   initialize: ->
     @stories = new WishPlus.Collections.Stories()
@@ -33,3 +34,10 @@ class WishPlus.Routers.Stories extends Backbone.Router
   userShow: (id) ->
     @userShowView = new WishPlus.Views.UserShow()
     $('#container').html(@userShowView.render().el)
+
+    @storiesIndexView = new WishPlus.Views.StoriesIndex({collection: @stories})
+    $('#container2').html(@storiesIndexView.render().el)
+
+  friends: ->
+    friendsView = new WishPlus.Views.Friends()
+    $('#container').html(friendsView.render().el)

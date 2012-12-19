@@ -3,14 +3,12 @@
 <head>
   <title>Wish+</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <script src="http://connect.soundcloud.com/sdk.js"></script>
-  <script src="http://www.youtube.com/iframe_api"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div id="player"></div>
 
 <!-- <div id="user_nav">
   <% if current_user %>
@@ -23,6 +21,7 @@
 
 
 <%= yield %>
+
 
 </body>
 </html>

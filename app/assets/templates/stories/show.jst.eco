@@ -1,5 +1,5 @@
-<h1>stories/show.jst.eco</h1>
-<h2>壽星: <img src= "<%= @story.get('star').picture %>" ><%= @story.get("star").name %></h2>
+
+<h2 id="story_star" data-starid="<%= @story.get('star').uid %>">壽星: <img src= "<%= @story.get('star').picture %>" ><%= @story.get("star").name %></h2>
 <h2>描述: <%= @story.get("name") %></h2>
 <h2>birthday: <%= @story.get("birthday") %></h2>
 

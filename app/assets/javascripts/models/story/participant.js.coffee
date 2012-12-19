@@ -3,7 +3,7 @@ class WishPlus.Models.Story.Participant extends Backbone.Model
   # url: ->
   #   '/api/stories/' + this.story_id + '/participations/' + this.id
 
-  initialize: (options)->
+  initialize: (attrs, options)->
     this.story_id = options.story_id
 
     this.on("change:user", this.parseUser)

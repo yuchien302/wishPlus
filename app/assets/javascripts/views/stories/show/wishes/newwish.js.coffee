@@ -6,42 +6,33 @@ class WishPlus.Views.StoryShow.NewWish extends Backbone.View
 
   events:
     'click #add_photowish': 'addPhotoWish'
+    'click #add_fbphotowish': 'addFBPhotoWish'
     'click #add_textwish': 'addTextWish'
-    'click #add_voicewish': 'addVoiceWish'
     'click #add_videowish': 'addVideoWish'
 
   render: ->
     $(@el).html(@template())
     newTextWishView = new WishPlus.Views.StoryShow.NewTextWish({collection: @collection})
     newPhotoWishView = new WishPlus.Views.StoryShow.NewPhotoWish({collection: @collection})
-    newVoiceWishView = new WishPlus.Views.StoryShow.NewVoiceWish({collection: @collection})
-    @newVideoWishView = new WishPlus.Views.StoryShow.NewVideoWish({collection: @collection})
+    newFBPhotoWishesView = new WishPlus.Views.StoryShow.NewFBPhotoWishes({collection: @collection})
+    newVideoWishView = new WishPlus.Views.StoryShow.NewVideoWish({collection: @collection})
     @$('#new_wish_modal').append(newTextWishView.render().el)
     @$('#new_wish_modal').append(newPhotoWishView.render().el)
-    @$('#new_wish_modal').append(newVoiceWishView.render().el)
-    @$('#new_wish_modal').append(@newVideoWishView.render().el)
+    @$('#new_wish_modal').append(newFBPhotoWishesView.render().el)
+    @$('#new_wish_modal').append(newVideoWishView.render().el)
     this
 
   addPhotoWish: (e) ->
     @$('#create_photo_wish_modal').modal('toggle')
 
+  addFBPhotoWish: (e) ->
+    console.log "add FBPhoto"
 
   addTextWish: (e) ->
     @$('#create_text_wish_modal').modal('toggle')
 
-  addVoiceWish: (e) ->
-    @$('#create_voice_wish_modal').modal('toggle')
-
   addVideoWish: (e) =>
     @$('#create_video_wish_modal').modal('toggle')
-    # @widget = new YT.UploadWidget( "widget",
-    #   width: 500
-    #   events:
-    #     onUploadSuccess: -> 
-    #       console.log "success"
-    #     onProcessingComplete: ->
-    #       console.log "complete"
-    # )
 
 
   removeWish: (e) ->

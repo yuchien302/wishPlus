@@ -17,6 +17,7 @@ class WishPlus.Views.StoriesNew extends Backbone.View
   selectStar: (e) ->
 
     uid = $('#new_story_star').val()
+    console.log uid
     self = this
     FB.api '/' + uid + '/picture', (res) ->
       self.picture = res.data.url
