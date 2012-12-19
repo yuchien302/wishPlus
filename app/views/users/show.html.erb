@@ -1,7 +1,6 @@
 
 <% if current_user %>
-  Signed in as <strong><%= current_user.name %></strong>!
-  <%= link_to "Sign out", logout_path, id: "log_out" %>
+  Signed in as <strong><%= link_to current_user.name, user_path(current_user) %></strong>!  <%= link_to "Sign out", logout_path, id: "log_out" %>  
 <% end %>
 
 <h1>welcome <%= image_tag(current_user.picture) %> <%= current_user.name %></h1>

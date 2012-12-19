@@ -10,11 +10,16 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
 
   submitPhotoWish: (e) ->
     e.preventDefault()
+    self = this
     formData = new FormData($('#add_photowish_form')[0])
-    console.log formData
     formData.append('wish[description]', 'lalala')
     formData.append('wish[type]', 'Photowish')
 
+    if @$('#new_photowish_remote_url').val() != ""
+      formData.append('wish[remote_photo_url]', @$('#new_photowish_remote_url').val())
+
+
+  
     $.ajax
       url: '/api/stories/' + @collection.story_id + '/wishes',
       type: 'POST',
@@ -23,8 +28,11 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
       contentType: false,
       type: 'POST',
       success: (data) ->
-        location.reload()
-        
+        self.$('#create_photo_wish_modal').modal('toggle')
+        self.collection.fetch()
+        # location.reload()
+
+
 
 
   render: ->

@@ -16,8 +16,7 @@ class WishPlus.Views.StoryShow.NewTextWish extends Backbone.View
     @collection.create attributes,
       wait:true
       success: (story) ->
-        # window.location.assign('/stories/' + story.id )
-        # location.reload()
+        $('#create_text_wish_modal').modal('toggle')
       error: (story, msg) ->
         alert "error: " + msg
 

@@ -16,7 +16,6 @@ class WishesController < ApplicationController
   def create
     # debugger
     @story = Story.find(params[:story_id])
-
     if params[:wish][:type] == "Photowish"
       @wish = Photowish.create(params[:wish])
     else
