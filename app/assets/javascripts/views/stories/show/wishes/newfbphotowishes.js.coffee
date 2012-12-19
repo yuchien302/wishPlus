@@ -7,6 +7,7 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
     'change select' : 'selectAlbum'
     'click #fbphoto_you_and_star' : 'youAndStar'
     'click #fbphoto_star_and_you' : 'starAndYou'
+    'click #fbphoto_star_you' : 'starYou'
 
   # submitFBPhotoWish: (e) ->
   #   e.preventDefault()
@@ -25,6 +26,30 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
     #     alert "error: " + msg
 
     # query: 'select caption,src_big, object_id from photo where (  (pid in (select pid from photo_tag where subject=me())) AND owner = 100002265879390 )'
+
+#     select object_id from photo where ( object_id in (select object_id from photo_tag where subject=me()) ) AND
+# object_id in (select object_id from photo where ( object_id in (select object_id from photo_tag where subject=100000221666201) )
+# )
+
+    # select object_id from photo where ( object_id in (select object_id from photo_tag where subject=me()) ) AND object_id in (select object_id from photo where ( object_id in (select object_id from photo_tag where subject = 100000221666201) ))
+
+
+  starYou: ->
+    console.log "star+you"
+    starid = $('#story_star').data("starid")
+    self = this
+    $('#fb_preview').html("")
+    FB.api 
+      method: 'fql.query'
+      query: 'select caption,src_small, object_id from photo where ( object_id in (select object_id from photo_tag where subject=me()) ) AND object_id in (select object_id from photo where ( object_id in (select object_id from photo_tag where subject = ' + starid + ') ))' 
+    , (res) ->
+      console.log res
+      res.forEach (fqlphoto) ->
+        photo = { id: fqlphoto.object_id, picture: fqlphoto.src_small}
+        view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
+        $('#fb_preview').append(view.render().el)
+
+
   starAndYou: ->
     console.log "owner=star"
     starid = $('#story_star').data("starid")

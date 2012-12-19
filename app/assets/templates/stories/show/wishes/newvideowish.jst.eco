@@ -8,7 +8,7 @@
 
   <div class="modal-body custom-height-modal-video">
 
-
+    <img src="/assets/loading.gif">
     <div id="widget"></div>
     <div id="player"></div>
 
