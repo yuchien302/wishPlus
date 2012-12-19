@@ -1,3 +1,7 @@
-<h1>Story</h1>
+<% if current_user %>
+  Signed in as <strong><%= current_user.name %></strong>!
+  <%= link_to "Sign out", logout_path, id: "log_out" %>
+<% end %>
+
 <div id="container">Sorry, maybe you are not in this story, or this story doesn't exit</div>
 

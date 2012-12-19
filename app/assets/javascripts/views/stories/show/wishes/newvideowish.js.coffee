@@ -27,23 +27,9 @@ class WishPlus.Views.StoryShow.NewVideoWish extends Backbone.View
     this
 
   onUploadSuccess: (event) =>
+    self = this
     console.log "uploaded"
     # alert "Video ID " + event.data.videoId + " was uploaded and is currently being processed."
-    # attributes = 
-    #   videoId: event.data.videoId
-    #   type: "Videowish"
-    #   story_id: @collection.story_id
-    # @collection.create attributes,
-    #   wait:true
-    #   success: (story) ->
-    #     # window.location.assign('/stories/' + story.id )
-    #     # location.reload()
-    #   error: (story, msg) ->
-    #     alert "error: " + msg
-
-
-  onProcessingComplete: (event) =>
-    console.log "done"
     attributes = 
       videoId: event.data.videoId
       type: "Videowish"
@@ -52,9 +38,31 @@ class WishPlus.Views.StoryShow.NewVideoWish extends Backbone.View
       wait:true
       success: (story) ->
         # window.location.assign('/stories/' + story.id )
-        location.reload()
+        self.id = story.id
+        @$('#create_video_wish_modal').modal('toggle')
+        # location.reload()
+
       error: (story, msg) ->
         alert "error: " + msg
+
+
+  onProcessingComplete: (event) =>
+    console.log "done"
+    console.log @id
+    @collection.get(@id).fetch()
+    # @collection.fetch()
+    # $(@el).html(@template())
+    # attributes = 
+    #   videoId: event.data.videoId
+    #   type: "Videowish"
+    #   story_id: @collection.story_id
+    # @collection.create attributes,
+    #   wait:true
+    #   success: (story) ->
+    #     # window.location.assign('/stories/' + story.id )
+    #     location.reload()
+    #   error: (story, msg) ->
+    #     alert "error: " + msg
 
 
     # @player = new YT.Player("player",

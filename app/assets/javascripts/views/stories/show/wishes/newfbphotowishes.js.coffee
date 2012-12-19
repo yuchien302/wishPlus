@@ -38,12 +38,14 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
     console.log "star+you"
     starid = $('#story_star').data("starid")
     self = this
-    $('#fb_preview').html("")
+    $('#fb_preview').html('<img src="/assets/loading.gif"/>')
     FB.api 
       method: 'fql.query'
       query: 'select caption,src_small, object_id from photo where ( object_id in (select object_id from photo_tag where subject=me()) ) AND object_id in (select object_id from photo where ( object_id in (select object_id from photo_tag where subject = ' + starid + ') ))' 
     , (res) ->
       console.log res
+      $('#fb_preview').html('')
+      $('#fb_preview').text('no photos QAQ') unless res.photos
       res.forEach (fqlphoto) ->
         photo = { id: fqlphoto.object_id, picture: fqlphoto.src_small}
         view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
@@ -54,12 +56,14 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
     console.log "owner=star"
     starid = $('#story_star').data("starid")
     self = this
-    $('#fb_preview').html("")
+    $('#fb_preview').html('<img src="/assets/loading.gif"/>')
     FB.api 
       method: 'fql.query'
       query: 'select caption,src_small, object_id from photo where (  (pid in (select pid from photo_tag where subject=me() )) AND owner = ' + starid + ')'
     , (res) ->
       console.log res
+      $('#fb_preview').html('')
+      $('#fb_preview').text('no photos QAQ') unless res.photos
       res.forEach (fqlphoto) ->
         photo = { id: fqlphoto.object_id, picture: fqlphoto.src_small}
         view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
@@ -70,12 +74,14 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
     console.log "owner=me"
     starid = $('#story_star').data("starid")
     self = this
-    $('#fb_preview').html("")
+    $('#fb_preview').html('<img src="/assets/loading.gif"/>')
     FB.api 
       method: 'fql.query'
       query: 'select caption,src_small, object_id from photo where (  (pid in (select pid from photo_tag where subject= ' + starid + ')) AND owner = me() )'
     , (res) ->
       console.log res
+      $('#fb_preview').html('')
+      $('#fb_preview').text('no photos QAQ') unless res.photos
       res.forEach (fqlphoto) ->
         photo = { id: fqlphoto.object_id, picture: fqlphoto.src_small}
         view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
@@ -85,8 +91,11 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
 
   selectAlbum: ->
     self = this
-    $('#fb_preview').html("")
+    $('#fb_preview').html('<img src="/assets/loading.gif"/>')
     FB.api "/" + $('#fb_album').val() + "?fields=photos.limit(500).fields(picture,id)", (res) ->
+      console.log res
+      $('#fb_preview').html('')
+      $('#fb_preview').text('no photos QAQ') unless res.photos
       res.photos["data"].forEach (photo) ->
         view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
         $('#fb_preview').append(view.render().el)
