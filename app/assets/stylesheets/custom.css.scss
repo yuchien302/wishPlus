@@ -3,7 +3,8 @@
 @import url(http://fonts.googleapis.com/css?family=Alegreya+SC:700,900,400);
 body {
 
-  background-image: url( asset-path("bg.jpg", image) );
+  /*background-image: url( asset-path("bg.jpg", image) );*/
+  background-color: rgb(173,221,221)
 }
 
 #container {
@@ -43,4 +44,61 @@ body {
 .custom-height-modal {
   height: 400px;
 }
+
+.story_banner {
+   background: #FFF;
+   height: 200px;
+   width: 65%;
+   left:40px;
+   top:80px;
+   position:absolute;
+   border-style: solid; border-width: 10px;
+   border-color:#FFF;
+    font-family: '微軟正黑體', sans-serif;
+   box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+}
+.star_photo {
+	height:100px;
+	width:100px;
+	background: rgb(99,145,145);
+    display: inline-block;
+    overflow: hidden;
+    box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+
+}
+.story_title {
+width:100%;
+height:100px;
+background: rgb(216,207,230);
+position: relative;
+font-size: 36px;
+
+}
+
+.wishContainer{
+   top:340px;
+   left:40px;
+   width: 65%;
+   background: rgb(99,145,145);
+   position: absolute;
+   border-style: solid; border-width: 10px;
+   border-color:#FFF;
+
+}
+
+#new_wish_panel{
+top:125px;
+right:30px;
+position: absolute;
+width:400px;
+}
+.participator_list{
+top:10px;
+position: relative;
+display: inline-block;
+}
+.participator_block{
+display: inline-block;
+}
+
 

@@ -1,22 +1,30 @@
+<div class="story_banner" id="story_star" data-starid="<%= @story.get('star').uid %>">
 
-<h2 id="story_star" data-starid="<%= @story.get('star').uid %>">壽星: <img src= "<%= @story.get('star').picture %>" ><%= @story.get("star").name %></h2>
-<h2>描述: <%= @story.get("name") %></h2>
-<h2>birthday: <%= @story.get("birthday") %></h2>
+	<div class="story_title">
+		<div class="star_photo" >
+			<img src= "https://graph.facebook.com/<%= @story.get('star').uid %>/picture?type=large" >
+		</div>
+		<div class="story_discription">
+			
+			<%= @story.get("star").name %>
+ 			<%= @story.get("name") %>
+		</div>
 
-<button id="add_participant" class="btn btn-large btn-primary">邀請更多朋友進來!</button>
-
-
+		
+ 		birthday: <%= @story.get("birthday") %>
+	</div>
+	<div id="participants" class = "participator_list"> 
+		
+	</div>
+	<button id="add_participant" class="btn btn-large btn-primary">邀請更多朋友進來!</button>
+</div>
 <div id="new_wish_panel">
 </div>
+<div class ="wishContainer">
+	<ul id="wishes">
+	</ul>
+</div>
 
-<ul id="participants">
-</ul>
-
-
-
-
-<ul id="wishes">
-</ul>
 
 
 

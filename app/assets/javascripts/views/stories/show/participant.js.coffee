@@ -1,7 +1,8 @@
 class WishPlus.Views.StoryShow.Participant extends Backbone.View
 
   template: JST['stories/show/participant']
-  tagName: 'li'
+  tagName: 'div'
+  className: 'participator_block'
 
   events:
     'click .remove_participant': 'removeParticipant'

@@ -1,1 +1,7 @@
-<a href="#" class="remove_participant">x</a><img src="<%= @participant.user['picture'] %>"><img src="https://graph.facebook.com/<%= @participant.user["uid"] %>/picture?type=large"> <%= @participant.user["uid"] %> <%= @participant.user["name"] %>
+
+<div>
+<a href="#" class="remove_participant">x</a><img src="<%= @participant.user['picture'] %>"> 
+</div>
+<div>
+<%= @participant.user["name"] %>
+</div>
