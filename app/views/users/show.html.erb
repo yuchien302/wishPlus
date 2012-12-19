@@ -1,9 +1,17 @@
+<div class="logo_header">
+  <%= image_tag("wellogo.png") %>
+  <div class"login_status">
+  	<% if current_user %>
+  	Signed in as <strong><%= link_to current_user.name, user_path(current_user) %></strong>!  <%= link_to "Sign out", logout_path, id: "log_out" %>  
+	<% end %>
+	</div>
+</div>
+<div id="container" class="container">container1 Loading</div>
+	<div class="user_name">
+		<a id="create_story" href="#create_story_modal" role="button" class="btn btn-large btn-primary" data-toggle="modal">做張大卡片吧!</a>
+		<%= current_user.name %>
+	</div>
 
-<% if current_user %>
-  Signed in as <strong><%= link_to current_user.name, user_path(current_user) %></strong>!  <%= link_to "Sign out", logout_path, id: "log_out" %>  
-<% end %>
-
-<h1>welcome <%= image_tag(current_user.picture) %> <%= current_user.name %></h1>
 <div id="new_story_container">Loading</div>
-<div id="container">container Loading</div>
-<div id="container2">container Loading</div>
+<div id="container2" class="story_list">container2 Loading</div>
+

@@ -1,6 +1,6 @@
 .jms-slideshow {
 	position: relative;
-    top : 180px;
+    top : 200px;
 	width: 80%;
 	max-width: 1400px;
 	min-width: 640px;
@@ -26,7 +26,27 @@
 	transition: background-color 1s linear;
 }
 
-
+.color-1 {
+	background-color: #E3D8FF;
+	background-color: rgba(227, 216, 255, 1);
+}
+.color-2 {
+	background-color: #EBBBBC;
+	background-color: rgba(235, 187, 188, 1);
+}
+.color-3 {
+	background-color: #EED9C0;
+	background-color: rgba(238, 217, 192, 1);
+}
+.color-4 {
+	background-color: #DFEBB1;
+	background-color: rgba(223, 235, 177, 1);
+}
+.color-5{
+	background-color: #C1E6E5;
+	background-color: rgba(193, 230, 229, 1);
+}
+/*
    .color-1 {
 	   background-image:url( ../../assets/gbpaper.png);
 			
@@ -46,7 +66,7 @@
 	.color-5 {  
 		background-image:url(../../assets/greenpaper.jpg);
 			
-	}
+	}*/
 
 .step {	
 	width: 900px;

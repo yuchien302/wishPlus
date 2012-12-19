@@ -1,3 +1,4 @@
+
 <div class="story_banner" id="story_star" data-starid="<%= @story.get('star').uid %>">
 
 	<div class="story_title">
@@ -5,13 +6,12 @@
 			<img src= "https://graph.facebook.com/<%= @story.get('star').uid %>/picture?type=large" >
 		</div>
 		<div class="story_discription">
-			
+			birthday: <%= @story.get("birthday") %>
+		</div>
+		<div class="story_discription">
 			<%= @story.get("star").name %>
  			<%= @story.get("name") %>
 		</div>
-
-		
- 		birthday: <%= @story.get("birthday") %>
 	</div>
 	<div id="participants" class = "participator_list"> 
 		

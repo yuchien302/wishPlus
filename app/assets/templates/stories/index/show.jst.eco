@@ -1,1 +1,1 @@
-<a href="/stories/<%= @story.id %>">Look inside</a><%= @story.get('name') %>: <%= @story.get('star').name %>
+<a href="/stories/<%= @story.id %>">Look inside</a><%= @story.get('name') %>:<%= @story.get('star').name %> 

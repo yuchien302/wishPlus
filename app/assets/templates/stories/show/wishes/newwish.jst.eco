@@ -1,9 +1,46 @@
-<button class="btn" id="add_photowish">來張照片吧!</button>
+<!-- <button class="btn" id="add_photowish">來張照片吧!</button>
 <button class="btn" id="add_textwish">寫點文字</button>
 <button class="btn" id="add_videowish">錄個影片</button>
-<button class="btn" id="add_fbphotowish">FB照片</button>
+<button class="btn" id="add_fbphotowish">FB照片</button> -->
 
-
+  <ul class="ca-menu">
+                    <li id="add_textwish">
+                        <a href="#">
+                            <span class="ca-icon">e</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Text</h2>
+                                <h3 class="ca-sub">Say something?</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="add_videowish">
+                        <a href="#">
+                            <span class="ca-icon">M</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Video</h2>
+                                <h3 class="ca-sub">Create video with your webcam!</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li  id="add_photowish">
+                        <a href="#">
+                            <span class="ca-icon">I</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Photos</h2>
+                                <h3 class="ca-sub">Add some photos in your disk!</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="add_fbphotowish">
+                        <a href="#">
+                            <span class="ca-icon">f</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">FB photos</h2>
+                                <h3 class="ca-sub">Add photos in your Facebook album!</h3>
+                            </div>
+                        </a>
+                    </li>                   
+                </ul>
 <div id="new_wish_modal">
 
 
