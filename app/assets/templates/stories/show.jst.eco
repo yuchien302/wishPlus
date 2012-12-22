@@ -18,9 +18,11 @@
 	</div>
 	<button id="add_participant" class="btn btn-large btn-primary">邀請更多朋友進來!</button>
 </div>
-<div id="new_wish_panel">
-</div>
+
 <div class ="wishContainer">
+	<div id="new_wish_panel" class="new_wish_panel">
+	</div>
+	
 	<ul id="wishes" class="thumbnails">
 	</ul>
 </div>
