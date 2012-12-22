@@ -9,14 +9,62 @@
   Signed in as <strong><%= current_user.name %></strong>!
   <%= link_to "Sign out", logout_path, id: "log_out" %>
 <% else %>
-  <div id ="login_fb">
+<div id ="login_fb">
     <%= link_to "Login", "/auth/facebook", id: "log_in" %>
     <%= image_tag("fb.png") %>
-  </div>
+</div>
 <% end %>
+<div id ="join_logo">
+    <div id = "join_slogen">
+	立刻試試做張大卡片吧!
+	</div>
+</div>
+<div id="sbi_container" class="sbi_container">
+					<div class="sbi_panel" data-bg="assets/s2.png">
+						<a href="#" class="sbi_label">Step 1</a>
+						<div class="sbi_content">						  
+						</div>
+					</div>
+					<div class="sbi_panel" data-bg="assets/3.jpg">
+						<a href="#" class="sbi_label">Step 2</a>
+						<div class="sbi_content">
+							
+						</div>
+					</div>
+					<div class="sbi_panel" data-bg="assets/s4.png">
+						<a class="sbi_label">Step 3</a>
+						<div class="sbi_content">
+							
+						</div>
+					</div>
+</div>
+		<div id = "arrow">
+          <%= image_tag("click.png") %>
+		</div>
+				<script type="text/javascript">
+			$(function() {
+				$('#sbi_container').bgImageMenu({
+					defaultBg	: 'assets/s1.png',	
+					type		: {
+						mode		: 'seqFade',
+						speed		: 250,
+						easing		: 'jswing',
+						seqfactor	: 100
+					}
+				});
+			});
 
-
-
+// 		var $label = $('.sbi_label');
+// $label.hover(
+// function(){
+// 	$('#arrow').css('display','block');
+// 	console.log("12")
+// 	},
+// function(){
+// 	$('#arrow').css('display', 'none');
+// 	});	
+		</script>
+<!--
 	<section id="jms-slideshow" class="jms-slideshow">
 				<div class="step" data-color="color-1">
 					<div class="jms-content">
@@ -60,6 +108,7 @@
 				
 			});
 		</script>
+		-->
 <!--
 
 <h1>MainPages#welcome</h1>
