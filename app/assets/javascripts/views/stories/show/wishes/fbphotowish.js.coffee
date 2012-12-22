@@ -2,6 +2,7 @@ class WishPlus.Views.StoryShow.FBPhotoWish extends Backbone.View
 
   template: JST['stories/show/wishes/fbphotowish']
   tagName: 'li'
+  className: 'span3'
 
   events:
     'click .remove_wish': 'removeWish'

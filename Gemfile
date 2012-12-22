@@ -14,6 +14,7 @@ gem 'rmagick'
 gem 'carrierwave'
 gem "raphael-rails", "~> 2.1.0"
 gem 'chosen-rails'
+gem "fancybox-rails", "~> 0.1.4"
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

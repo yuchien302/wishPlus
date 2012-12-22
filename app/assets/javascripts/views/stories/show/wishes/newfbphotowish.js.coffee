@@ -2,6 +2,7 @@ class WishPlus.Views.StoryShow.NewFBPhotoWish extends Backbone.View
 
   template: JST['stories/show/wishes/newfbphotowish']
   tagName: 'span'
+  className: 'fbphoto_wish_preview'
 
   events:
     'click img': 'selectPhoto'
@@ -11,6 +12,7 @@ class WishPlus.Views.StoryShow.NewFBPhotoWish extends Backbone.View
 
 
   selectPhoto: (e) ->
+    self = this
     e.preventDefault()
     console.log @wishes
     attributes = 
@@ -20,6 +22,7 @@ class WishPlus.Views.StoryShow.NewFBPhotoWish extends Backbone.View
     @wishes.create attributes,
       wait:true
       success: (story) ->
+        $(self.el).addClass("uploaded")
         # window.location.assign('/stories/' + story.id )
         # location.reload()
       error: (story, msg) ->

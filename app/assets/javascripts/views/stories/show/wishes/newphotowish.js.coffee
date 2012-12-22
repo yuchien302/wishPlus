@@ -7,7 +7,6 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
 
   # initialize: ->
 
-
   submitPhotoWish: (e) ->
     e.preventDefault()
     self = this
@@ -36,5 +35,7 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
 
   render: ->
     $(@el).html(@template())
+    newFBPhotoWishesView = new WishPlus.Views.StoryShow.NewFBPhotoWishes({collection: @collection})
+    @$('#fbphoto_wish').html(newFBPhotoWishesView.render().el)
     this
 

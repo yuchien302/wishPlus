@@ -6,7 +6,7 @@ class WishPlus.Views.StoryShow.NewWish extends Backbone.View
 
   events:
     'click #add_photowish': 'addPhotoWish'
-    'click #add_fbphotowish': 'addFBPhotoWish'
+    # 'click #add_fbphotowish': 'addFBPhotoWish'
     'click #add_textwish': 'addTextWish'
     'click #add_videowish': 'addVideoWish'
 
@@ -14,11 +14,11 @@ class WishPlus.Views.StoryShow.NewWish extends Backbone.View
     $(@el).html(@template())
     newTextWishView = new WishPlus.Views.StoryShow.NewTextWish({collection: @collection})
     newPhotoWishView = new WishPlus.Views.StoryShow.NewPhotoWish({collection: @collection})
-    newFBPhotoWishesView = new WishPlus.Views.StoryShow.NewFBPhotoWishes({collection: @collection})
+    # newFBPhotoWishesView = new WishPlus.Views.StoryShow.NewFBPhotoWishes({collection: @collection})
     newVideoWishView = new WishPlus.Views.StoryShow.NewVideoWish({collection: @collection})
     @$('#new_wish_modal').append(newTextWishView.render().el)
     @$('#new_wish_modal').append(newPhotoWishView.render().el)
-    @$('#new_wish_modal').append(newFBPhotoWishesView.render().el)
+    # @$('#new_wish_modal').append(newFBPhotoWishesView.render().el)
     @$('#new_wish_modal').append(newVideoWishView.render().el)
     this
 

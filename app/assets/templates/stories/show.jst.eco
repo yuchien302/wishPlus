@@ -21,7 +21,7 @@
 <div id="new_wish_panel">
 </div>
 <div class ="wishContainer">
-	<ul id="wishes">
+	<ul id="wishes" class="thumbnails">
 	</ul>
 </div>
 
