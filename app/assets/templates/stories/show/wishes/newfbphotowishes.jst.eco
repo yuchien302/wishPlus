@@ -2,13 +2,5 @@
 <button class="btn" id="fbphoto_you_and_star">你相簿他的照片</button>
 <button class="btn" id="fbphoto_star_and_you">他相簿你的照片</button>
 <button class="btn" id="fbphoto_star_you">一起出現的照片</button>
- 	<!-- <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-		<span>Auto Fetch Photo</span>
-		<ul class="dropdown">
-							<li id="fbphoto_you_and_star"><a href="#">你相簿他的照片</a></li>
-							<li id="fbphoto_star_and_you"><a href="#">他相簿你的照片</a></li>
-							<li id="fbphoto_star_you"><a href="#">
-								一起出現的照片</a></li>
-		</ul>
-	</div> -->
+
 <div id="fb_preview">Photos Preveiw Here</div>

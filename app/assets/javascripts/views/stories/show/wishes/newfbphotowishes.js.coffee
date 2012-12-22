@@ -81,12 +81,11 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
     , (res) ->
       console.log res
       $('#fb_preview').html('')
-      $('#fb_preview').text('no photos QAQ') unless res.photos
+      $('#fb_preview').text('no photos QAQ') unless res
       res.forEach (fqlphoto) ->
         photo = { id: fqlphoto.object_id, picture: fqlphoto.src_small}
         view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
         $('#fb_preview').append(view.render().el)
-
 
 
   selectAlbum: ->
@@ -99,8 +98,6 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
       res.photos["data"].forEach (photo) ->
         view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
         $('#fb_preview').append(view.render().el)
-
-
 
 
   render: ->

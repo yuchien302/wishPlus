@@ -7,7 +7,6 @@ class WishPlus.Views.UserShow extends Backbone.View
     'click #friends_birthday': 'friends_birthday'
 
 
-
   initialize: ->
     self = this
     @FBfriends = []
@@ -20,6 +19,19 @@ class WishPlus.Views.UserShow extends Backbone.View
       $('#new_story_star').chosen()
       self.sortBirthday(friendlist)
 
+  makeWish: (star) =>
+    console.log star
+    console.log star.next_birthday
+    attributes = 
+      star_uid: star.id
+      star_name: star.name
+      birthday: star.next_birthday
+    @collection.create attributes,
+      wait:true
+      success: (story) ->
+        window.location.assign('/stories/' + story.id )
+      error: (story, msg) ->
+        alert "error: " + msg
 
 
   sortBirthday: (friendlist) =>
@@ -47,10 +59,12 @@ class WishPlus.Views.UserShow extends Backbone.View
 
 
   
-  friends_birthday: ->
+  friends_birthday: =>
+    self = this
     @FBfriends.forEach (friend) ->
       # console.log friend.picture
       view = new WishPlus.Views.UserShow.Upcomming(model: friend)
+      view.on("makeWish", self.makeWish)
       $('#friendlist').append(view.render().el)
       # $('#friendlist').append('<li>' + friend["name"] + '<img src="#"'  + '/></li>')
 
