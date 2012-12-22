@@ -32,7 +32,7 @@ class WishPlus.Routers.Stories extends Backbone.Router
     $('#container').html(@storyShowView.render().el)
 
   userShow: (id) ->
-    @userShowView = new WishPlus.Views.UserShow()
+    @userShowView = new WishPlus.Views.UserShow({collection: @stories})
     $('#container').html(@userShowView.render().el)
 
     @storiesIndexView = new WishPlus.Views.StoriesIndex({collection: @stories})

@@ -31,7 +31,7 @@
                             </div>
                         </a>
                     </li>
-                    <li id="add_fbphotowish">
+<!--                     <li id="add_fbphotowish">
                         <a href="#">
                             <span class="ca-icon">f</span>
                             <div class="ca-content">
@@ -39,7 +39,7 @@
                                 <h3 class="ca-sub">Add photos in your Facebook album!</h3>
                             </div>
                         </a>
-                    </li>                   
+                    </li>   -->                 
                 </ul>
 <div id="new_wish_modal">
 

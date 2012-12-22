@@ -7,18 +7,14 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
 
   # initialize: ->
 
-
   submitPhotoWish: (e) ->
     e.preventDefault()
     self = this
     formData = new FormData($('#add_photowish_form')[0])
-    formData.append('wish[description]', 'lalala')
     formData.append('wish[type]', 'Photowish')
 
     if @$('#new_photowish_remote_url').val() != ""
       formData.append('wish[remote_photo_url]', @$('#new_photowish_remote_url').val())
-
-
   
     $.ajax
       url: '/api/stories/' + @collection.story_id + '/wishes',
@@ -30,6 +26,8 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
       success: (data) ->
         self.$('#create_photo_wish_modal').modal('toggle')
         self.collection.fetch()
+        # console.log data.id
+        # self.collection.get(data.id).fetch()
         # location.reload()
 
 
@@ -37,5 +35,7 @@ class WishPlus.Views.StoryShow.NewPhotoWish extends Backbone.View
 
   render: ->
     $(@el).html(@template())
+    newFBPhotoWishesView = new WishPlus.Views.StoryShow.NewFBPhotoWishes({collection: @collection})
+    @$('#fbphoto_wish').html(newFBPhotoWishesView.render().el)
     this
 

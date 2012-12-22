@@ -10,7 +10,7 @@ class WishPlus.Views.StoryShow.NewVideoWish extends Backbone.View
     @widget
 
   loadWidget: ->
-    @$('#widget').html("")
+    @$('#widget').html("<img src='/assets/loading.gif'>")
     @widget = new YT.UploadWidget( "widget",
       width: 500
       events:
@@ -47,8 +47,6 @@ class WishPlus.Views.StoryShow.NewVideoWish extends Backbone.View
 
 
   onProcessingComplete: (event) =>
-    console.log "done"
-    console.log @id
     @collection.get(@id).fetch()
     # @collection.fetch()
     # $(@el).html(@template())

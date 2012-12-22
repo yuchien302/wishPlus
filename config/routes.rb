@@ -21,6 +21,21 @@ WishPlus::Application.routes.draw do
       resources :chats
     end
     resources :users
+
+    resources :wishes do
+      resources :comments
+    end
+
+    resources :photowishes do
+      resources :comments
+    end
+
+    resources :videowishes do
+      resources :comments
+    end
+
+
+
   end
 
   scope "lib" do
