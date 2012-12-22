@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
 @import url(http://fonts.googleapis.com/css?family=Alegreya+SC:700,900,400);
 @import url(http://fonts.googleapis.com/css?family=Monda);
+
 body {
 
   background-image: url( asset-path("bg_2.jpg", image) );
@@ -217,11 +218,11 @@ font-size: 36px;
    border-color:#FFF;
 }
 
-#new_wish_panel{
-top:80px;
-right:30px;
-position: absolute;
-width:400px;
+.new_wish_panel{
+  // margin: 0 0 0 0;
+  // padding: 0 0 0 0;
+  // position: absolute;
+  width: 900;
 }
 .participator_list{
 top:10px;
@@ -279,4 +280,8 @@ display: inline-block;
   width: 80%;
   margin: 20px auto 60px auto;
   position: absolute;
+}
+
+textarea {
+  width:90%;
 }
