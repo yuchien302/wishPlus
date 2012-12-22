@@ -1,0 +1,29 @@
+.fbphoto_wish_preview img:hover{
+  opacity: .5;
+  cursor: pointer;
+
+}
+
+.fbphoto_wish_preview img:active{
+  opacity: .8;
+}
+
+
+.uploaded{
+  opacity: .5;
+  position: relative;
+}
+.uploaded:before{
+  content: '';
+  background: url("/assets/accept-icon.png");
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+
+#wishes {
+  list-style-type: none;
+}
