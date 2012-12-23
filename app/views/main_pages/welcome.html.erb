@@ -14,15 +14,16 @@
     <%= image_tag("fb.png") %>
 </div>
 <% end %>
-<div id ="join_logo">
-    <div id = "join_slogen">
-	立刻試試做張大卡片吧!
+<div id = "join_slogen">
+	<%= image_tag("slogen2.png") %>
 	</div>
+<div id ="join_logo">
+	
 </div>
 <div id="sbi_container" class="sbi_container">
-					<div class="sbi_panel" data-bg="assets/s2.png">
-						<a href="#" class="sbi_label">Step 1</a>
-						<div class="sbi_content">						  
+	<div class="sbi_panel" data-bg="assets/s2.png">
+		<a href="#" class="sbi_label">Step 1</a>
+			<div class="sbi_content">						  
 						</div>
 					</div>
 					<div class="sbi_panel" data-bg="assets/3.jpg">
@@ -38,13 +39,15 @@
 						</div>
 					</div>
 </div>
-		<div id = "arrow">
+
+		<div id = "arrow">			
           <%= image_tag("click.png") %>
 		</div>
 				<script type="text/javascript">
 			$(function() {
 				$('#sbi_container').bgImageMenu({
-					defaultBg	: 'assets/s1.png',	
+					defaultBg	: 'assets/s1.png',
+
 					type		: {
 						mode		: 'seqFade',
 						speed		: 250,
