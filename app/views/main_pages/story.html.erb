@@ -1,6 +1,16 @@
+
+
 <% if current_user %>
-  Signed in as <strong><%= link_to current_user.name, user_path(current_user) %></strong>!  <%= link_to "Sign out", logout_path, id: "log_out" %>  
+  <div class="user_name"> 
+    <%= link_to current_user.name, user_path(current_user) %>
+    <span><%= link_to "Sign out", logout_path, id: "log_out" %></span> 
+  </div>
 <% end %>
 
-<div id="container">Sorry, maybe you are not in this story, or this story doesn't exit</div>
+
+<div class="logo_header">
+  <a href="/"><%= image_tag("wellogo.png") %></a>
+</div>
+
+<div id="container"></div>
 

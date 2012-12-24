@@ -1,17 +1,18 @@
 <div class="logo_header">
-  <%= image_tag("wellogo.png") %>
+  <a href="/"><%= image_tag("wellogo.png") %></a>
 </div>
 
-<div id="container" class="container">container1 Loading</div>
+<div id="container" class="container"></div>
 	
 	<div class="user_name">	
 		<%= link_to current_user.name, user_path(current_user) %>
 		<span><%= link_to "Sign out", logout_path, id: "log_out" %></span> 
 	</div>
+
 	<div class="create_icon">
 		<a id="create_story" href="#create_story_modal" data-toggle="modal"><img src="../assets/create1.png"></a>
 	</div>
 
-<div id="new_story_container">Loading</div>
-<div id="container2" class="story_list">container2 Loading</div>
+<div id="new_story_container"></div>
+<div id="container2" class="story_list"></div>
 

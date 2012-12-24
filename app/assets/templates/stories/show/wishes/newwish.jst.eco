@@ -4,12 +4,25 @@
 <button class="btn" id="add_fbphotowish">FB照片</button> -->
 
   <ul class="ca-menu">
-                    <li id="add_textwish">
+<div class='popbox'>
+  <a class='open' href='#'>Click Here!</a>
+
+  <div class='collapse'>
+    <div class='box'>
+      <div class='arrow'></div>
+      <div class='arrow-border'></div>
+
+      Content in PopBox goes here :)
+      <a href="#" class="close">close</a>
+    </div>
+  </div>
+</div>
+                    <li  id="add_photowish">
                         <a href="#">
-                            <span class="ca-icon">e</span>
+                            <span class="ca-icon">I</span>
                             <div class="ca-content">
-                                <h2 class="ca-main">Text</h2>
-                                <h3 class="ca-sub">Say something?</h3>
+                                <h2 class="ca-main">Photos</h2>
+                                <h3 class="ca-sub">Add some photos in your disk!</h3>
                             </div>
                         </a>
                     </li>
@@ -22,15 +35,16 @@
                             </div>
                         </a>
                     </li>
-                    <li  id="add_photowish">
+                    <li id="add_textwish">
                         <a href="#">
-                            <span class="ca-icon">I</span>
+                            <span class="ca-icon">e</span>
                             <div class="ca-content">
-                                <h2 class="ca-main">Photos</h2>
-                                <h3 class="ca-sub">Add some photos in your disk!</h3>
+                                <h2 class="ca-main">Text</h2>
+                                <h3 class="ca-sub">Say something?</h3>
                             </div>
                         </a>
                     </li>
+
 <!--                     <li id="add_fbphotowish">
                         <a href="#">
                             <span class="ca-icon">f</span>

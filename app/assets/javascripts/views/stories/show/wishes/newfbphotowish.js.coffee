@@ -14,6 +14,7 @@ class WishPlus.Views.StoryShow.NewFBPhotoWish extends Backbone.View
   selectPhoto: (e) ->
     self = this
     e.preventDefault()
+    prompt ""
     console.log @wishes
     attributes = 
       pid: @model.id

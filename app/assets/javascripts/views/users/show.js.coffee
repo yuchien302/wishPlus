@@ -18,6 +18,7 @@ class WishPlus.Views.UserShow extends Backbone.View
         self.FBfriends.push({name:friend["name"], id:friend["id"], birthday:friend["birthday"], picture:friend.picture.data.url})
       $('#new_story_star').chosen()
       self.sortBirthday(friendlist)
+      self.friends_birthday()
 
   makeWish: (star) =>
     console.log star

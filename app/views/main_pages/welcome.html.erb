@@ -6,8 +6,10 @@
 </div>
 
 <% if current_user %>
-  Signed in as <strong><%= current_user.name %></strong>!
-  <%= link_to "Sign out", logout_path, id: "log_out" %>
+	<div class="user_name"> 
+    <%= link_to current_user.name, user_path(current_user) %>
+    <span><%= link_to "Sign out", logout_path, id: "log_out" %></span> 
+  </div>
 <% else %>
 <div id ="login_fb">
     <%= link_to "Login", "/auth/facebook", id: "log_in" %>

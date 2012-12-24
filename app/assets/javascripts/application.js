@@ -19,6 +19,7 @@
 //= require chosen-jquery
 //= require fancybox
 //= require raphael
+//= require .//popbox.min.js
 //= require .//facebook
 //= require .//wishPlus
 //= require_tree ../templates/
