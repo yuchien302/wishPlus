@@ -297,16 +297,16 @@ display: inline-block;
 }
 
 .story_list{
-  margin-top: 15%;
-  margin-left:2%; 
-  width:70%;
-  position: absolute;
-}
-.container {
   top: 18%;
   width: 100%;
   position: absolute;
   padding-left: 70%;
+}
+.container {
+  margin-top: 15%;
+  margin-left:2%; 
+  width:70%;
+  position: absolute;
 }
 
 textarea {
@@ -368,7 +368,7 @@ textarea {
 .tp-grid li img {
   display: block;
   border: none;
-  margin-bottom: -25px;
+  margin-bottom: -30px;
 }
 .tp-grid li span{
   font-family: 'Nothing You Could Do', cursive;
