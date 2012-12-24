@@ -8,7 +8,11 @@ body {
   background-image: url( asset-path("bg_2.jpg", image) );
   /*background-color: rgb(173,221,221)*/
 }
-
+.create_icon{
+  top:40px;
+  right:50px;
+  position: absolute;
+  }
 
 #welcome_logo{
 	display:block;
@@ -210,11 +214,11 @@ a:hover {
 	height:100px;
 	width:100px;
 	background: rgb(99,145,145);
-    display: inline-block;
-    overflow: hidden;
-    box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
-
+  display: inline-block;
+  overflow: hidden;
+  box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
 }
+
 .story_title {
 width:100%;
 height:100px;
@@ -259,8 +263,8 @@ position: relative;
   display:block;
   top:10px;
   left:10px;
-  width:135px;
-  height: 50px;
+  width:185px;
+  height: 64px;
   position:absolute;
 }
 .logo_header img{
@@ -268,36 +272,106 @@ position: relative;
   height:100%;
 }
 
-.login_status{
-  display:inline-block;
-}
 .user_name{
   top:20px;
   right:20px;
-  width:300px;
+  width:200px;
   height:50px;
   position: absolute;
-font-family: 'Monda', sans-serif;
-font-size: 15px;
+  font-family: 'Monda', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+.user_name span{
+  font-weight:400;
 }
 
+.nearbirth{
+width:30%;
+right:5%;
+margin: 30px 0;
+
+}
 .nearbirth div{
 display: inline-block;
 }
 
 .story_list{
-  left:40px;
-  top:100px;
-  width:80%;
+  margin-top: 15%;
+  margin-left:2%; 
+  width:70%;
   position: absolute;
 }
 .container {
-  top:300px;
-  width: 80%;
-  margin: 20px auto 60px auto;
+  top: 18%;
+  width: 100%;
   position: absolute;
+  padding-left: 70%;
 }
 
 textarea {
   width:90%;
 }
+
+.upcom {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-size: 0.875em;
+  float:left;
+  width:180px;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.upcomImg{
+  margin-bottom: 5px;
+  background: rgb(99,145,145);
+  display: inline-block;
+  height: 180px;
+  width : 180px;
+  overflow: hidden;
+  box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+}
+.upcom_align{
+  max-height : 180px;
+  overflow: hidden;
+  margin:auto;
+}
+.upcom p{
+  margin:0;
+}
+
+.tp-grid {
+  list-style-type: none;
+  position: relative;
+  display: block;
+}
+
+.tp-grid li {
+  position: relative;
+  cursor: pointer;
+  border: 10px solid #fff;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 10px;
+  left: 0px;
+  top: 0px;
+  display: inline-block;
+  visibility: visible;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px 0px;
+}
+.tp-grid li a {
+  display: block;
+  outline: none;
+}
+.tp-grid li img {
+  display: block;
+  border: none;
+  margin-bottom: -25px;
+}
+.tp-grid li span{
+  font-family: 'Nothing You Could Do', cursive;
+  margin-left: 10px;
+}
+

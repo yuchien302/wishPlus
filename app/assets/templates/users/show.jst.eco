@@ -3,4 +3,4 @@
 <button id="friends_birthday" class="btn btn-large btn-primary">看看最近誰生日!</button>
 
 <div id="friendlist" class="nearbirth"></div>
-<ul id="storieslist"></ul>
+<ul id="storieslist" ></ul>

@@ -2,6 +2,7 @@ class WishPlus.Views.StoriesIndex extends Backbone.View
 
   template: JST['stories/index']
   tagName: 'ul'
+  className: 'tp-grid'
 
   render: ->
     $(@el).html(@template())
