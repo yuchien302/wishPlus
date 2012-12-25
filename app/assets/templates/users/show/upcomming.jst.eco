@@ -2,8 +2,8 @@
 <div class = "upcom">
 	<div class="upcom_Img">
 		<div class ="upcom_align">
+			 <span><%= @friend.name+" " %><%= @friend.birthday %></span>
 			<img src="<%= @friend.picture %>">
-      <span><%= @friend.name %><%= @friend.birthday %></span>
  		</div>
 	</div>
 

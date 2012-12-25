@@ -1,13 +1,19 @@
 
 
-<button id="friends_birthday" class="btn btn-large btn-primary">看看最近誰生日!</button>
+<img id="friends_birthday" class="friends_birthday" src = "../assets/upcom_message.png"</img>
 
 <ul id="friendlist" class="tp-grid">
 <li>  
-  <a href="#">    
-    <img src="../assets/item_create.png" />
-    <span>立刻新增Wish!</span>
-  </a>
+  <div class="upcom">
+  	<div class ="upcom_Img">
+       <div class="upcom_align">
+       	<p>點擊大頭照或點這裡新增Wish!</p>
+  		<a href="#">      			
+    	<img src="../assets/item_create2.png" />
+    	
+    	</a>
+    </div>
+	</div>
+  </div>
 </li>
-
 </ul>

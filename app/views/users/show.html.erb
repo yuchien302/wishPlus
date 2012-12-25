@@ -4,12 +4,11 @@
 
 	
 	<div class="user_name">	
+		<div class="create_icon">
+		<a id="create_story" href="#create_story_modal" data-toggle="modal"><img src="../assets/create_s.png"></a>
 		<%= link_to current_user.name, user_path(current_user) %>
 		<span><%= link_to "Sign out", logout_path, id: "log_out" %></span> 
-	</div>
-
-	<div class="create_icon">
-		<a id="create_story" href="#create_story_modal" data-toggle="modal"><img src="../assets/create1.png"></a>
+	  </div>
 	</div>
 
 <div id="new_story_container"></div>
