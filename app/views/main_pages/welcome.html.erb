@@ -27,16 +27,21 @@
 
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>錄個影片</h3>
-    <em>上傳影片時會需要您的 youtube 帳號授權</em> 
+    <h3>做張大卡片吧！</h3>
   </div>  
 
   <div class="modal-body custom-height-modal-video">
-
+  	<h5>Wish+</h5>
+  	<p><em>Facebook註冊:  </em>看看近期有誰生日!</p>
+  	<p>想知道你和壽星被共同tag在哪些相片嗎?</p>
+  	<p>還可以錄一段影片像壽星線上最真誠的祝福!</p>
+		<div id ="login_fb">
+		    <%= link_to "Login", "/auth/facebook", id: "log_in" %>
+		</div>
   </div>
 
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">略過</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
   </div>
 </div>
 

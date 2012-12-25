@@ -24,13 +24,13 @@
 	<div id="new_wish_panel" class="new_wish_panel">
 	</div>
 	
-
 	<ul id="wishes" class="thumbnails">
 	</ul>
+
 </div>
 
 
+<div id="chat_room" class="chat_room">
+	<ul id="messages"></ul>
 
-
-
-<div id="char_room"></div>
+</div>
