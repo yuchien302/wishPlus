@@ -1,4 +1,8 @@
 .ch-item6{
+
+	background-position: center;
+
+
 	width: 100%;
 	height: 100%;
 	border-radius: 10%;
@@ -59,6 +63,10 @@
 	transition: all 0.6s ease-in-out;
 }
 
+.ch-info-front6{
+	background-position: center;
+}
+
 .ch-info6 .ch-info-front6 {
 	-webkit-transform-origin: 50% 100%;
 	-moz-transform-origin: 50% 100%;
@@ -66,6 +74,7 @@
 	-ms-transform-origin: 50% 100%;
 	transform-origin: 50% 100%;
 	
+
 	z-index: 100;
 	box-shadow: 
 		inset 2px 1px 4px rgba(0,0,0,0.1);

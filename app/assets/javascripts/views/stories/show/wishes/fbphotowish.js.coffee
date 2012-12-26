@@ -19,7 +19,8 @@ class WishPlus.Views.StoryShow.FBPhotoWish extends Backbone.View
       console.log res
       $(self.el).html(self.template({wish: res}))
       self.$("p").text(self.model.get("name"))
-      self.$("div").css('background-image', 'url("' + res.source + '")')
+      self.$(".ch-item6").css('background-image', 'url("' + res.source + '")')
+      self.$(".ch-info-front6").css('background-image', 'url("' + res.source + '")')
     this
 
   removeWish: (e) ->
