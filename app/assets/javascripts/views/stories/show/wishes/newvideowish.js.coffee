@@ -34,6 +34,8 @@ class WishPlus.Views.StoryShow.NewVideoWish extends Backbone.View
       videoId: event.data.videoId
       type: "Videowish"
       story_id: @collection.story_id
+      user_uid: window.current_user.id
+      username: window.current_user.name
     @collection.create attributes,
       wait:true
       success: (story) ->

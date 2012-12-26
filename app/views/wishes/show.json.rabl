@@ -1,2 +1,2 @@
 object @wish
-attributes :user_id, :story_id, :id, :type, :name, :description, :photo, :remote_photo_url, :videoId, :pid
+attributes :user_id, :story_id, :id, :type, :name, :description, :photo, :remote_photo_url, :videoId, :pid, :user_uid, :username

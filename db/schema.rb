@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226210102) do
+ActiveRecord::Schema.define(:version => 20121226212936) do
 
   create_table "chats", :force => true do |t|
     t.integer  "user_id"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(:version => 20121226210102) do
     t.string   "photo"
     t.string   "videoId"
     t.string   "pid"
+    t.string   "user_uid"
+    t.string   "username"
   end
 
 end
