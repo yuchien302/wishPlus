@@ -15,21 +15,21 @@ class WishPlus.Views.StoryShow extends Backbone.View
     @model.wishes.on("add", @appendWish, this)
     # @model.wishes.on("reset", @render, this)
 
-    @model.chats.fetch({async:false})
-    @model.chats.on("add", @appendChat, this)
+    # @model.chats.fetch({async:false})
+    # @model.chats.on("add", @appendChat, this)
     # @model.chats.on("reset", @render, this)
 
   render: ->
     $(@el).html(@template(story: @model))
     @model.participants.each(@appendParticipant)
     @model.wishes.each(@appendWish)
-    @model.chats.each(@appendChat)
+    # @model.chats.each(@appendChat)
 
     newWishView = new WishPlus.Views.StoryShow.NewWish({collection: @model.wishes})
     @$("#new_wish_panel").append(newWishView.render().el)
 
-    newChatView = new WishPlus.Views.StoryShow.NewChat({collection: @model.chats})
-    @$("#chat_room").append(newChatView.render().el)
+    # newChatView = new WishPlus.Views.StoryShow.NewChat({collection: @model.chats})
+    # @$("#chat_room").append(newChatView.render().el)
 
     this
 
