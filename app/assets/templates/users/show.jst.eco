@@ -7,10 +7,15 @@
   <div class="upcom">
   	<div class ="upcom_Img">
        <div class="upcom_align">
-       	<p>點擊大頭照或點這裡新增Wish!</p>
-  		<a href="#">      			
-    	<img src="../assets/item_create2.png" />
+        
+       	
+      <a href="#create_story_modal" data-toggle="modal">
+        <p>點擊大頭照或點這裡新增Wish!</p>
+        <img src="../assets/item_create2.png" />
+      </a>
+        
     	
+
     	</a>
     </div>
 	</div>
