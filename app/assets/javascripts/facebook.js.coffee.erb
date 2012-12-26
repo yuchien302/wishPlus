@@ -35,7 +35,8 @@ window.fbAsyncInit = ->
   #   WishPlus.init()
   #   window.current_user = response
     # console.log response
-
+  # $( '#carousel' ).elastislide();
+  
   FB.getLoginStatus (response) ->
     if response.status == "connected"
       FB.api "/me", (response) ->

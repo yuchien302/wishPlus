@@ -23,6 +23,8 @@
 //= require .//facebook
 //= require .//wishPlus
 //= require_tree ../templates/
+//= require .//modernizr.custom.17475
+//= require_tree .//Elastislide_js
 //= require_tree .//models
 //= require_tree .//collections
 //= require_tree .//views

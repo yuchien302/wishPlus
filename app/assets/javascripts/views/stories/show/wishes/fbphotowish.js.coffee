@@ -15,7 +15,8 @@ class WishPlus.Views.StoryShow.FBPhotoWish extends Backbone.View
   render: ->
     self = this
     console.log @model.get("name")
-    FB.api '/' + @model.get("pid") + '?fields=source', (res) ->
+    FB.api '/' + @model.get("pid") + '?fields=source,link', (res) ->
+      console.log res
       $(self.el).html(self.template({wish: res}))
       self.$("p").text(self.model.get("name"))
     this
