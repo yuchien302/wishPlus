@@ -1,1 +1,15 @@
-<a href="#" class="remove_wish">x</a> <p></p>
+
+
+<div class="ch-item6" style="background-image: url(../assets/talkingman.png);background-repeat: no-repeat">				
+		<div class="ch-info-wrap6">
+			<div class="ch-info6">
+				<div class="ch-info-front6" style="background-image: url(../assets/talkingman.png);background-repeat: no-repeat">					
+				</div>
+				<div class="ch-info-back6">				<a class="remove_wish">x</a>	
+						
+						<h3></h3>
+							<p></p>
+				</div>	
+			</div>
+		</div>
+</div>

@@ -1,1 +1,18 @@
-<a href="#" class="remove_wish">x</a> <em>this is video: </em><%= @wish.get('videoId') %><div id="YT-<%= @wish.get('videoId') %>"></div>
+<!--   <a href="#" class="remove_wish">x</a> 
+<%= @wish.get('videoId') %>
+<div id="YT-<%= @wish.get('videoId') %>"></div>   -->
+<div class="ch-item6">				
+ 		
+		<div class="ch-info-wrap6">
+			<div class="ch-info6">
+				<div class="ch-info-front6">
+					
+				</div>
+				<div class="ch-info-back6" style="background:#000; margin:auto">
+					<a class="remove_wish">x</a>	
+<div id="YT-<%= @wish.get('videoId') %>"></div>						
+				</div>	
+			</div>
+		</div>
+</div>  
+
