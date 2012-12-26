@@ -8,9 +8,11 @@ class WishPlus.Views.StoryShow.NewChat extends Backbone.View
 
   submitChat: (e) ->
     e.preventDefault()
-    attributes = 
-      message: @$('#new_message').val()
+    attributes =
+      message: @$('#new_message').val().replace(/\n\r?/g, '<br />')
       story_id: @collection.story_id
+      username: window.current_user.name
+      useruid: window.current_user.id
     @collection.create attributes,
       wait:true
       success: (story) ->

@@ -49,7 +49,7 @@ class WishPlus.Views.StoryShow.NewFBPhotoWishes extends Backbone.View
         photo = { id: fqlphoto.object_id, picture: fqlphoto.src_small}
         view = new WishPlus.Views.StoryShow.NewFBPhotoWish({model:photo, collection: self.collection})
         $('#fb_preview').append(view.render().el)
-      $('#fb_preview li').hoverdir()
+      # $('#fb_preview li').hoverdir()
 
 
     $('#fb_preview2').html('<img src="/assets/loading.gif"/>')

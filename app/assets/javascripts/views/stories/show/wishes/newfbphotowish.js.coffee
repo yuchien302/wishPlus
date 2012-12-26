@@ -14,12 +14,12 @@ class WishPlus.Views.StoryShow.NewFBPhotoWish extends Backbone.View
   selectPhoto: (e) ->
     self = this
     e.preventDefault()
-    prompt ""
-    console.log @wishes
+    name = prompt("為這張照片說些什麼吧?")
     attributes = 
       pid: @model.id
       type: "Fbphotowish"
       story_id: @wishes.story_id
+      name: name
     @wishes.create attributes,
       wait:true
       success: (story) ->
@@ -30,7 +30,6 @@ class WishPlus.Views.StoryShow.NewFBPhotoWish extends Backbone.View
         alert "error: " + msg
 
   render: ->
-    console.log @model
     $(@el).html(@template(photo: @model))
     this
 

@@ -12,8 +12,9 @@ class WishPlus.Views.StoryShow.TextWish extends Backbone.View
 
 
   render: ->
-    console.log @model
+    # console.log @model
     $(@el).html(@template(wish: @model))
+    @$('p').html(@model.get('description'))
     this
 
   removeWish: (e) ->

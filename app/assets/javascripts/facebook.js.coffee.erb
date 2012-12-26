@@ -33,10 +33,15 @@ window.fbAsyncInit = ->
   
   # FB.api "/me", (response) ->
   #   WishPlus.init()
-  #   console.log response
+  #   window.current_user = response
+    # console.log response
 
   FB.getLoginStatus (response) ->
-    WishPlus.init() if response.status == "connected"
+    if response.status == "connected"
+      FB.api "/me", (response) ->
+        WishPlus.init()
+        window.current_user = response
+    # WishPlus.init() if response.status == "connected"
 
 
 

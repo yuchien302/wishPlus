@@ -1,2 +1,2 @@
-<img src= "https://graph.facebook.com/<%= @chat.get('user').uid %>/picture?type=square" >
-<%= @chat.get("message") %>
+<!-- <img src= "https://graph.facebook.com/<%= @chat.get('useruid') %>/picture?type=square" > -->
+<b><%= @chat.get('username') %>: </b>

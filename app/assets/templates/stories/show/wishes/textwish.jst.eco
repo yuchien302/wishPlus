@@ -1,1 +1,1 @@
-<a href="#" class="remove_wish">x</a> <em>this is text: </em><%= @wish.get('description') %>
+<a href="#" class="remove_wish">x</a> <p></p>

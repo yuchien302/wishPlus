@@ -14,6 +14,7 @@ class WishPlus.Views.StoryShow.Chat extends Backbone.View
 
   render: ->
     $(@el).html(@template(chat: @model))
+    $(@el).append(@model.get('message'))
     this
 
   removeMessage: (e) ->
