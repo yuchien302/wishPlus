@@ -2,7 +2,7 @@ class WishesController < ApplicationController
   respond_to :json
 
   def index
-    @wishes = Wish.where(story_id: params[:story_id], user_id: current_user.id)
+    @wishes = Wish.where(story_id: params[:story_id])
 
     respond_with @wishes || ""
   end
