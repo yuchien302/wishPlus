@@ -1,5 +1,17 @@
 
-<a class="remove_wish">x</a><a href="<%= @wish.link %>"><img class="img-polaroid" src="<%= @wish.source %>"></a><h4>Sender Name</h4><p>123</p>
+<!-- <a class="remove_wish">x</a><a href="<%= @wish.link %>"><img class="img-polaroid" src="<%= @wish.source %>"></a><h4>Sender Name</h4><p>123</p>
+ -->
 
-
-
+<div class="ch-item6">				
+		<div class="ch-info-wrap6">
+			<div class="ch-info6">
+				<div class="ch-info-front6">					
+				</div>
+				<div class="ch-info-back6">				<a class="remove_wish">x</a>	
+						<a href="<%= @wish.link %>">
+						<h3>Services Image</h3>
+							<p>by Gumball Creative View on Dribbble</p>
+				</div>	
+			</div>
+		</div>
+</div>

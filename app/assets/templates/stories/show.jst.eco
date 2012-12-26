@@ -27,8 +27,7 @@
 <!-- <div class ="wishContainer  baraja-demo"> -->
 <div class ="wishContainer">
 
-	<ul id="wishes" class="" >
-	<!-- <ul id="wishes" class="baraja-container" > -->
+	<ul id="wishes" class="ch-grid6" >
 	</ul>
 
 </div>
