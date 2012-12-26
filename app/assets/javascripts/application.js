@@ -19,6 +19,7 @@
 //= require chosen-jquery
 //= require fancybox
 //= require raphael
+//= require modernizr.custom.79639
 //= require .//popbox.min.js
 //= require .//facebook
 //= require .//wishPlus
