@@ -18,17 +18,29 @@
 
 
 	<div id="participants" class = "participator_list"> 
+
 		
+		<div class="participator_block" id="add_participant_block">
+			<div>
+				<a href="#" id="add_participant" rel="tooltip" title="first tooltip" ><img src="/assets/add_friend.png" alt="lalala"></a> 
+			</div>
+		</div>
+
+
 	</div>
-	<button id="add_participant" class="btn btn-large btn-primary">邀請更多朋友進來!</button>
+
+	
+
 </div>
+
 <div id="new_wish_panel" class="new_wish_panel">
 </div>
-<!-- <div class ="wishContainer  baraja-demo"> -->
+
 <div class ="wishContainer">
 
+
 	<ul id="wishes" class="ch-grid6" >
-	</ul>
+
 
 </div>
 

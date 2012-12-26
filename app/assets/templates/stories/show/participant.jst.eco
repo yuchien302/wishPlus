@@ -2,6 +2,7 @@
 <div>
 <a href="#" class="remove_participant">x</a><img src="<%= @participant.user['picture'] %>"> 
 </div>
-<div>
+
+<!-- <div>
 <%= @participant.user["name"] %>
-</div>
+</div> -->
