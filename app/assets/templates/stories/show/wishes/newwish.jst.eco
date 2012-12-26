@@ -25,7 +25,7 @@
 </div> -->
 
 
-  <ul class="ca-menu">
+  <!-- <ul class="ca-menu">
 
                     <li  id="add_photowish">
                         <a href="#">
@@ -63,8 +63,35 @@
                                 <h3 class="ca-sub">Add photos in your Facebook album!</h3>
                             </div>
                         </a>
-                    </li>   -->                 
-                </ul>
+                    </li>               
+                </ul> -->
+
+<ul class="ch-grid">
+                    <li>
+                        <div id="add_photowish" class="ch-item ch-img-1">
+                            <div class="ch-info">
+                                <h3>照片祝福</h3>
+                                <p>FB,URL,DISK</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="add_videowish" class="ch-item ch-img-2">
+                            <div class="ch-info">
+                                <h3>影片祝福</h3>
+                                <p>Webcam with Youtube</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="add_textwish" class="ch-item ch-img-3">
+                            <div class="ch-info">
+                                <h3>文字祝福</h3>
+                                <p>說些什麼吧:)</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>                
 <div id="new_wish_modal">
 
 
