@@ -1,4 +1,4 @@
-
+<!-- story頁面template -->
 <div class="story_banner" id="story_star" data-starid="<%= @story.get('star').uid %>">
 
 	<div class="story_title">
@@ -8,21 +8,24 @@
 		<div class="story_discription">
 			birthday: <%= @story.get("birthday") %>
 		</div>
+
 		<div class="story_discription">
 			<%= @story.get("star").name %>
  			<%= @story.get("name") %>
 		</div>
 	</div>
+
+
+
 	<div id="participants" class = "participator_list"> 
 		
 	</div>
 	<button id="add_participant" class="btn btn-large btn-primary">邀請更多朋友進來!</button>
 </div>
-
+<div id="new_wish_panel" class="new_wish_panel">
+</div>
 <div class ="wishContainer">
 
-	<div id="new_wish_panel" class="new_wish_panel">
-	</div>
 	
 	<ul id="wishes" class="thumbnails">
 	</ul>
