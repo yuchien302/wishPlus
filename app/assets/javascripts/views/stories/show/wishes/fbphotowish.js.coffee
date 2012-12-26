@@ -20,7 +20,7 @@ class WishPlus.Views.StoryShow.FBPhotoWish extends Backbone.View
       $(self.el).html(self.template({wish: res}))
       self.$("p").text(self.model.get("name"))
       self.$("h3").text(self.model.get('username') + ": " )
-      self.$("h3").before("<img src='https://graph.facebook.com/" + self.model.get('user_uid') + "/picture'>")
+      self.$("h3").before("<img src='https://graph.facebook.com/" + self.model.get('useruid') + "/picture'>")
       self.$(".ch-item6").css('background-image', 'url("' + res.source + '")')
       self.$(".ch-info-front6").css('background-image', 'url("' + res.source + '")')
     this

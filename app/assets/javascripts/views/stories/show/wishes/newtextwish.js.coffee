@@ -12,7 +12,7 @@ class WishPlus.Views.StoryShow.NewTextWish extends Backbone.View
       description: @$('#new_textwish_description').val().replace(/\n\r?/g, '<br />')
       type: "Textwish"
       story_id: @collection.story_id
-      user_uid: window.current_user.id
+      useruid: window.current_user.id
       username: window.current_user.name
     console.log attributes
     @collection.create attributes,

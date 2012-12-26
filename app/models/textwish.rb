@@ -1,5 +1,5 @@
 class Textwish < Wish
 
-  attr_accessible :description, :user_uid, :username
+  attr_accessible :description, :useruid, :username
 
 end

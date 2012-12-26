@@ -22,14 +22,15 @@
 		
 		<div class="participator_block" id="add_participant_block">
 			<div>
-				<a href="#" id="add_participant" rel="tooltip" title="first tooltip" ><img src="/assets/add_friend.png" alt="lalala"></a> 
+				<a href="#" id="add_participant" rel="tooltip" title="邀請好友!" ><img src="/assets/add_friend.png" alt="lalala"></a> 
 			</div>
 		</div>
 
 
 	</div>
 
-	<button id="FBpublish" class="btn btn-primary">發佈到Facebook!!</button>
+	<a href="#" id="FBpublish"><img src="/assets/fb1.png"></a>
+
 	
 
 </div>

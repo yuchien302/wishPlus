@@ -16,7 +16,7 @@ class WishPlus.Views.StoryShow.TextWish extends Backbone.View
     $(@el).html(@template(wish: @model))
     @$('p').html(@model.get('description'))
     @$("h3").text(@model.get('username') + ": " )
-    @$("h3").before("<img src='https://graph.facebook.com/" + @model.get('user_uid') + "/picture'>")
+    @$("h3").before("<img src='https://graph.facebook.com/" + @model.get('useruid') + "/picture'>")
     this
 
   removeWish: (e) ->

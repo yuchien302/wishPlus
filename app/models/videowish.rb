@@ -1,5 +1,5 @@
 class Videowish < Wish
 
-  attr_accessible :videoId, :user_uid, :username
+  attr_accessible :videoId, :useruid, :username
 
 end

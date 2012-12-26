@@ -20,7 +20,7 @@ class WishPlus.Views.StoryShow.NewFBPhotoWish extends Backbone.View
       type: "Fbphotowish"
       story_id: @wishes.story_id
       name: name
-      user_uid: window.current_user.id
+      useruid: window.current_user.id
       username: window.current_user.name
     @wishes.create attributes,
       wait:true
