@@ -2,7 +2,7 @@ class StoriesController < ApplicationController
   respond_to :json
 
   def index
-    @stories = current_user.stories
+    @stories = current_user.stories + current_user.cards
     # respond_with current_user.stories || ""
   end
 
