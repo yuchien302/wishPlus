@@ -1,10 +1,11 @@
-class WishPlus.Views.StoryShow.TextWish extends Backbone.View
+class WishPlus.Views.StoryShow.Chat extends Backbone.View
 
-  template: JST['stories/show/wishes/textwish']
+  template: JST['stories/show/chat']
   tagName: 'li'
+  className: 'message'
 
   events:
-    'click .remove_wish': 'removeWish'
+    'click .remove_message': 'removeMessage'
 
   initialize: ->
     @model.on('change', @render, this)
@@ -12,12 +13,11 @@ class WishPlus.Views.StoryShow.TextWish extends Backbone.View
 
 
   render: ->
-    # console.log @model
-    $(@el).html(@template(wish: @model))
-    @$('p').html(@model.get('description'))
+    $(@el).html(@template(chat: @model))
+    $(@el).append(@model.get('message'))
     this
 
-  removeWish: (e) ->
+  removeMessage: (e) ->
     e.preventDefault()
     @model.destroy()
   
@@ -25,4 +25,3 @@ class WishPlus.Views.StoryShow.TextWish extends Backbone.View
     this.remove()
     this.unbind()
     this.model.unbind("change", this.modelChanged)
-

@@ -29,10 +29,14 @@
 	
 	<ul id="wishes" class="">
 	</ul>
+
 </div>
 
 
+<div id="chat_room" class="chat_room">
+	<ul id="messages"></ul>
 
+<!--   <textarea id="new_message" rows="1"></textarea>
+  <button id="submit_new_chat">送出</button> -->
 
-
-<div id="char_room"></div>
+</div>
