@@ -29,6 +29,7 @@
 
 	</div>
 
+	<button id="FBpublish" class="btn btn-primary">發佈到Facebook!!</button>
 	
 
 </div>

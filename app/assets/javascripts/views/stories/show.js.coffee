@@ -4,6 +4,13 @@ class WishPlus.Views.StoryShow extends Backbone.View
 
   events:
     'click #add_participant': 'addParticipant'
+    'click #FBpublish': 'FBpublish'
+
+  FBpublish: ->
+    FB.ui
+      method: 'feed'
+      link: window.location.href
+
 
   initialize: ->
 
