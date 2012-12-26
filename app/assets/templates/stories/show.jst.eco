@@ -27,7 +27,7 @@
 <div class ="wishContainer">
 
 	
-	<ul id="wishes" class="thumbnails">
+	<ul id="wishes" class="">
 	</ul>
 </div>
 
