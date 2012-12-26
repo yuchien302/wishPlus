@@ -10,7 +10,7 @@
 				</div>
 				<div class="ch-info-back6">				
 						<a class="remove_wish">x</a>	
-						<a href="<%= @wish.link %>">Facebook</a>
+						<a href="<%= @wish.link %>">View on Facebook</a>
 						<div><h3>Services Image</h3></div>
 						<p>text</p>
 				</div>	
