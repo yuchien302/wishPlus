@@ -10,6 +10,7 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require .//modernizr.custom.17475
 //= require jquery
 //= require jquery_ujs
 //= require jquery-fileupload
@@ -19,8 +20,6 @@
 //= require chosen-jquery
 //= require fancybox
 //= require raphael
-//= require modernizr.custom.79639
-//= require .//popbox.min.js
 //= require .//facebook
 //= require .//wishPlus
 //= require_tree ../templates/
