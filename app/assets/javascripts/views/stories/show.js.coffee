@@ -10,6 +10,7 @@ class WishPlus.Views.StoryShow extends Backbone.View
     FB.ui
       method: 'feed'
       link: window.location.href
+      description: '一起來做張給' + @model.get("star").name + '的卡片吧!'
 
 
   initialize: ->
