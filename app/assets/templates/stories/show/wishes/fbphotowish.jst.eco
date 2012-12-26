@@ -1,4 +1,4 @@
-
+<div class="hohoho">123</div>
 <a class="remove_wish">x</a><a href="<%= @wish.link %>"><img class="img-polaroid" src="<%= @wish.source %>"></a><h4>Sender Name</h4><p>123</p>
 
 

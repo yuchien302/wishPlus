@@ -36,7 +36,9 @@ class WishPlus.Views.StoryShow extends Backbone.View
   appendParticipant: (participant) =>
     # console.log participant
     view = new WishPlus.Views.StoryShow.Participant(model: participant)
+    addPar = @$('#add_participant').remove()
     @$('#participants').append(view.render().el)
+    @$('#participants').append(addPar)
     
   appendChat: (chat) =>
     # console.log participant
