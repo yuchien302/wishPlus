@@ -22,6 +22,8 @@ WishPlus::Application.routes.draw do
     end
     resources :users
 
+    get :cards, to: 'users#card'
+
     resources :wishes do
       resources :comments
     end
