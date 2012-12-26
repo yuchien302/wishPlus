@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121226114917) do
+ActiveRecord::Schema.define(:version => 20121226210102) do
 
   create_table "chats", :force => true do |t|
     t.integer  "user_id"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121226114917) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "username"
-    t.integer  "useruid"
+    t.string   "useruid"
   end
 
   create_table "comments", :force => true do |t|
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20121226114917) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "star_id"
-    t.integer  "star_uid"
+    t.string   "star_uid"
   end
 
   create_table "users", :force => true do |t|
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(:version => 20121226114917) do
     t.text     "description"
     t.string   "photo"
     t.string   "videoId"
-    t.integer  "pid"
+    t.string   "pid"
   end
 
 end

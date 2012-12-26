@@ -22,4 +22,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def card
+    @cards = current_user.cards    
+    respond_to do |format|
+      format.json { render json: @cards }
+    end
+  end
+
 end

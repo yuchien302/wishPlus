@@ -8,10 +8,11 @@
 			<div class="ch-info6">
 				<div class="ch-info-front6">					
 				</div>
-				<div class="ch-info-back6">				<a class="remove_wish">x</a>	
-						<a href="<%= @wish.link %>">
-						<h3>Services Image</h3>
-							<p>by Gumball Creative View on Dribbble</p>
+				<div class="ch-info-back6">				
+						<a class="remove_wish">x</a>	
+						<a href="<%= @wish.link %>">Facebook</a>
+						<div><h3>Services Image</h3></div>
+						<p>text</p>
 				</div>	
 			</div>
 		</div>

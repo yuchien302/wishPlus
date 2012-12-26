@@ -7,7 +7,7 @@ class WishPlus.Models.Story extends Backbone.Model
 
     @participants = new WishPlus.Collections.Stories.Participants({}, {story_id: this.id})
     @wishes = new WishPlus.Collections.Stories.Wishes({}, {story_id: this.id})
-    @chats = new WishPlus.Collections.Stories.Chats({}, {story_id: this.id})
+    # @chats = new WishPlus.Collections.Stories.Chats({}, {story_id: this.id})
     # this.participants.fetch({async:false})
 
 
